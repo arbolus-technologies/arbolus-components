@@ -1,0 +1,159 @@
+.resetDefaultButtonStyle {
+  border: none;
+  background: none;
+  width: fit-content;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  font-weight: $weight-semi-bold;
+  outline: none !important;
+  justify-content: space-between;
+  line-height: 24px;
+}
+
+.primary {
+  @extend .resetDefaultButtonStyle;
+  background: $primary-purple;
+  color: $primary-white;
+
+  &:hover {
+    background: $b-color-accent-purple-dark;
+  }
+
+  &:disabled {
+    background: $b-color-primary-purple-disabled;
+  }
+}
+
+.secondary {
+  @extend .resetDefaultButtonStyle;
+  border: 1px solid $primary-purple;
+  background: $primary-white;
+  color: $primary-purple;
+
+  &:hover {
+    color: $b-color-accent-purple-dark;
+    border: 1px solid $b-color-accent-purple-dark;
+  }
+
+  &:disabled {
+    color: $b-color-primary-purple-disabled;
+    border: 1px solid $b-color-primary-purple-disabled;
+  }
+}
+
+.tertiary {
+  @extend .resetDefaultButtonStyle;
+  background: $primary-white;
+  color: $primary-purple;
+
+  &:hover {
+    color: $b-color-accent-purple-dark;
+  }
+
+  &:disabled {
+    color: $b-color-primary-purple-disabled;
+  }
+}
+
+.success {
+  @extend .resetDefaultButtonStyle;
+  background: $secondary-green;
+  color: $primary-white;
+
+  &:hover {
+    background: $b-color-success;
+  }
+
+  &:disabled {
+    background: $b-color-success-disabled;
+  }
+}
+
+.danger {
+  @extend .resetDefaultButtonStyle;
+  background: $secondary-deep-orange;
+  color: $primary-white;
+
+  &:hover {
+    background: $b-danger-hover;
+  }
+
+  &:disabled {
+    background: $b-danger-disabled;
+  }
+}
+
+.tab {
+  @extend .resetDefaultButtonStyle;
+  background: $primary-white;
+  border: 1px solid $primary-dark-blue;
+
+  &:hover {
+    background: $secondary-light-grey;
+  }
+}
+
+.activeTab {
+  @extend .resetDefaultButtonStyle;
+  background: $primary-dark-blue;
+  color: $primary-white;
+  font-weight: $weight-light;
+
+  &:hover {
+    background: $primary-dark-blue;
+  }
+
+  &:disabled {
+    background: $primary-dark-blue;
+  }
+}
+
+.iconButton {
+  @extend .resetDefaultButtonStyle;
+  border: 1px solid $primary-purple;
+  background: $primary-white;
+  color: $primary-purple;
+  padding: 8px;
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+
+  &:hover {
+    color: $b-color-accent-purple-dark;
+    border: 1px solid $b-color-accent-purple-dark;
+  }
+
+  &:disabled {
+    color: $b-color-primary-purple-disabled;
+    border: 1px solid $b-color-primary-purple-disabled;
+  }
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.endIconPadding {
+  padding-right: 8px;
+}
+
+.startIconPadding {
+  padding-left: 8px;
+}
+
+.startIconMargin {
+  margin-right: 8px;
+}
+
+.endIconMargin {
+  margin-left: 8px;
+}
+
+.centerIcon {
+  margin: auto;
+}

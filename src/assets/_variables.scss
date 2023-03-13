@@ -1,0 +1,137 @@
+$primary-dark-blue: #000a3f;
+$primary-dark-blue-with-opacity-1: #000a3f30;
+$primary-dark-blue-with-opacity-2: #000a3f66;
+$primary-dark-blue-with-opacity-3: #000a3fa6;
+$primary-dark-blue-with-opacity-4: #000a3f99;
+$primary-bright-blue: #0062ff;
+$primary-purple: #6157fc;
+$primary-purple-with-opacity: #c0bcfe;
+$primary-white: #ffffff;
+$primary-black: #000000;
+$secondary-red: #f53636;
+$tertiary-red: #f36960;
+$secondary-deep-orange: #ff5a3a;
+$secondary-orange: #ff6600;
+$secondary-yellow: #ffcb00;
+$secondary-green: #4cd964;
+$secondary-mint: #73dce0;
+$secondary-grey: #f2f2f5;
+$grey-0: rgba(0, 10, 63, 0.8);
+$grey-1: #7f849f;
+$grey-2: #bbbecb;
+$grey-3: #e2e2ea;
+$grey-4: #f1f1f5;
+$grey-5: #f4f4f4;
+$grey-6: #bababa;
+$dark-grey: #80849f;
+$tones-lilac: #f2edff;
+$tones-light-blue: #e0effc;
+$tones-light-green: #94e8a2;
+$tones-peach: #fcaf7c;
+$tones-light-yellow: #ffe57f;
+$tones-dark-yellow: #ffcc00;
+$tones-dark-orange: #ff7652;
+$third-blue: #32323e;
+$gray-placeholder: #babbc7;
+$gray-tab: #b3b6c5;
+
+//Hover Colors
+$primary-purple-hover: #e5e4ff;
+$primary-purple-hover-tint: #f7f6ff;
+
+//RGB Colors
+
+$primary-white-rgb: rgb(255, 255, 255);
+
+// Input Text
+
+$input-text-color: #32323e;
+
+// Shades and Tints
+
+$primary-dark-blue-shade: #000937;
+$primary-dark-blue-tint: #1a2352;
+$primary-bright-blue-shade: #0056e0;
+$primary-bright-blue-tint: #1a72ff;
+$primary-purple-shade: #4c45c7;
+$primary-purple-tint: #7168fc;
+$primary-white-shade: #fbfbfb;
+$primary-white-tint: #ffffff;
+$secondary-red-shade: #d83030;
+$secondary-red-tint: #f64a4a;
+$secondary-green-shade: #43bf58;
+$secondary-green-tint: #5edd74;
+$secondary-deep-orange-shade: #e04f33;
+$secondary-deep-orange-tint: #ff6b4e;
+
+// Project page specific colors
+
+$chat-message-border-mine: #facf6c;
+
+$submenu-background-color: $primary-dark-blue;
+$submenu-background-color-shade: #1a2252;
+$submenu-background-color-tint: #000939;
+
+// Icon default colors
+
+$icon-base-color: #7c819c;
+
+// Create Event page specific colors
+
+$avatar-icon-background-color: #7c819c;
+
+// Table specific colors
+
+$secondary-table-text: #696974;
+
+// Additional Subheader colors
+
+$secondary-subheader-text: #696974;
+
+// Expert sidebar colors
+
+$expert-dropdown-background: #7b75e1;
+$expert-dropdown-border: #665edd;
+$expert-card-text: #a7a3e9;
+$expert-status-pending: #facf6c;
+
+// Pill colors
+
+$grey-pill: #7c819c;
+$red-pill: $secondary-deep-orange;
+$green-pill: $secondary-green;
+$gray-hover: #f7f7f7;
+
+// modal
+$cancel-button: #80859f;
+
+// Table
+$table-grey: #f9f9f9;
+
+//used this to add transparency since root variables cannot be used for sass functions
+$error-color: #f53636;
+$light-blue: #80859f;
+$primary-dark-blue: #000a3f;
+$tooltip-background: #545b7e;
+$light-grey: #ccced9;
+$secondary-light-grey: #f2f2f5;
+$disabled-calendar-cells: #e0e0e0;
+
+//hover on star button
+
+// v2 colors
+$b-color-base-dark-1: #000a3f;
+$b-color-base-dark-2: #000a3f80;
+$b-color-base-dark-4: #000a3f1a;
+$b-color-accent-purple-dark: #4e46ca;
+$b-color-secondary-grey-dark: #80859f;
+$b-color-secondary-grey-mid: #ccced9;
+$b-color-primary-purple-disabled: #a09afd;
+$b-color-success: #3db05d;
+$b-color-success-disabled: #94e8a2;
+$b-danger-hover: #cc4a3b;
+$b-danger-disabled: #ffad9d;
+
+// box shadow
+
+$box-shadow-1: 0px 0px 8px 2px rgba(228, 228, 228, 0.5);

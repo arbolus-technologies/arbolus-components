@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import './variables';
+
+$primary-font: 'Poppins', sans-serif;
+$secondary-font: 'OpenSans', sans-serif;
+$tertiary-font: 'Georgia', serif;
+$icon-font: 'ciq-icon-set';
+
+$weight-light: 400;
+$weight-regular: 500;
+$weight-semi-bold: 600;
+$weight-bold: 700;
+
+$size-ultra-large: 30px;
+$size-xxx-large: 28px;
+$size-xx-large: 24px;
+$size-x-semi-large: 20px;
+$size-x-large: 18px;
+$size-large: 16px;
+$size-regular: 14px;
+$size-small: 12px;
+$size-x-small: 11px;
+$size-tiny: 10px;
+
+$size-title-xtra-large: 40px;
+$size-title-large: 28px;
+$size-title-medium: 24px;
+$size-title-regular: 20px;
+$size-title-small: 16px;
+$size-title-extra-small: 14px;
+
+//==============================================//
+// Media Queries
+//==============================================//
+
+@media (min-width: 320px) and (max-width: 823px) {
+  $size-xx-large: 20px;
+  $size-x-large: 16px;
+  $size-large: 14px;
+  $size-regular: 12px;
+  $size-small: 10px;
+  $size-x-small: 9px;
+  $size-tiny: 8px;
+
+  $size-title-xtra-large: 30px;
+  $size-title-large: 26px;
+  $size-title-medium: 20px;
+  $size-title-regular: 18px;
+  $size-title-small: 14px;
+  $size-title-extra-small: 12px;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: $primary-dark-blue;
+
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: $size-title-regular;
+  font-weight: $weight-semi-bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: $primary-dark-blue;
+
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: $size-title-small;
+  font-weight: $weight-semi-bold;
+  color: $primary-dark-blue;
+
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: $size-title-extra-small;
+  font-weight: $weight-semi-bold;
+  color: $primary-dark-blue;
+
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 14px;
+}
+
+.material-symbols-sharp {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
