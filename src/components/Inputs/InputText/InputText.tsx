@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import classNames from 'classnames';
 import React from 'react';
-import { FieldErrors } from 'react-hook-form';
 import { FormFeedback, Input, InputGroup, InputGroupText } from 'reactstrap';
 import styles from './InputText.module.scss';
-import { Disabled } from './InputText.stories';
 
 export interface InputTextProps {
   defaultValue?: string;
