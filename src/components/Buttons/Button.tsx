@@ -1,6 +1,6 @@
-import classNames from 'classnames';
-import React from 'react';
-import styles from './Button.module.scss';
+import classNames from 'classnames'
+import React from 'react'
+import styles from './Button.module.scss'
 
 export type ButtonType =
   | 'primary'
@@ -9,19 +9,19 @@ export type ButtonType =
   | 'danger'
   | 'success'
   | 'tab'
-  | 'iconButton';
+  | 'iconButton'
 
 export interface ButtonProps {
-  text?: string;
+  text?: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onClick?: (e: any) => void;
-  type?: ButtonType;
-  disabled?: boolean;
-  startIcon?: string;
-  endIcon?: string;
-  activeTab?: boolean;
-  nativeType?: 'submit' | 'reset' | 'button';
-  centerIcon?: string;
+  onClick?: (e: any) => void
+  type?: ButtonType
+  disabled?: boolean
+  startIcon?: string
+  endIcon?: string
+  activeTab?: boolean
+  nativeType?: 'submit' | 'reset' | 'button'
+  centerIcon?: string
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -33,53 +33,35 @@ export const Button: React.FC<ButtonProps> = ({
   disabled = false,
   activeTab,
   nativeType = 'button',
-  centerIcon
+  centerIcon,
 }) => (
   <button
     className={classNames(
       styles[type],
       activeTab && styles.activeTab,
       startIcon && styles.startIconPadding,
-      endIcon && styles.endIconPadding
+      endIcon && styles.endIconPadding,
     )}
     onClick={onClick}
     disabled={disabled}
     type={nativeType}
   >
     {startIcon && (
-      <span
-        className={classNames(
-          'material-symbols-sharp',
-          styles.icon,
-          styles.startIconMargin
-        )}
-      >
+      <span className={classNames('material-symbols-sharp', styles.icon, styles.startIconMargin)}>
         {startIcon}
       </span>
     )}
     {text ? (
       text
     ) : (
-      <span
-        className={classNames(
-          'material-symbols-sharp',
-          styles.icon,
-          styles.centerIcon
-        )}
-      >
+      <span className={classNames('material-symbols-sharp', styles.icon, styles.centerIcon)}>
         {centerIcon}
       </span>
     )}
     {endIcon && (
-      <span
-        className={classNames(
-          'material-symbols-sharp',
-          styles.icon,
-          styles.endIconMargin
-        )}
-      >
+      <span className={classNames('material-symbols-sharp', styles.icon, styles.endIconMargin)}>
         {endIcon}
       </span>
     )}
   </button>
-);
+)

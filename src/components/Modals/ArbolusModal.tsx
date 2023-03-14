@@ -1,30 +1,30 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import classnames from 'classnames';
-import React from 'react';
-import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
-import { Button, ButtonType } from '../Buttons/Button';
-import styles from './ArbolusModal.module.scss';
+import classnames from 'classnames'
+import React from 'react'
+import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap'
+import { Button, ButtonType } from '../Buttons/Button'
+import styles from './ArbolusModal.module.scss'
 
 export interface ArbolusModalProps {
-  title: string;
-  iconTitle?: string;
-  subtitle?: string;
-  toggle: () => void; // setState to False to dismiss the modal when click outside
-  isOpen: boolean;
+  title: string
+  iconTitle?: string
+  subtitle?: string
+  toggle: () => void // setState to False to dismiss the modal when click outside
+  isOpen: boolean
   buttons: {
     leftButton: {
-      onClick: (e: any) => void;
-      buttonType: ButtonType;
-      text: string;
-      disabled?: boolean;
-    };
+      onClick: (e: any) => void
+      buttonType: ButtonType
+      text: string
+      disabled?: boolean
+    }
     rightButton: {
-      onClick: (e: any) => void;
-      buttonType: ButtonType;
-      text: string;
-      disabled?: boolean;
-    };
-  };
+      onClick: (e: any) => void
+      buttonType: ButtonType
+      text: string
+      disabled?: boolean
+    }
+  }
 }
 export const ArbolusModal: React.FC<ArbolusModalProps> = ({
   title,
@@ -32,20 +32,14 @@ export const ArbolusModal: React.FC<ArbolusModalProps> = ({
   isOpen,
   toggle,
   iconTitle,
-  buttons
+  buttons,
 }) => {
-  const { leftButton, rightButton } = buttons;
+  const { leftButton, rightButton } = buttons
   return (
-    <Modal
-      isOpen={isOpen}
-      className={classnames('modal-alert', styles.container)}
-      toggle={toggle}
-    >
+    <Modal isOpen={isOpen} className={classnames('modal-alert', styles.container)} toggle={toggle}>
       {title && (
         <ModalHeader className={styles.title}>
-          {iconTitle && (
-            <img src={iconTitle} alt="iconTitle" className={styles.image} />
-          )}
+          {iconTitle && <img src={iconTitle} alt='iconTitle' className={styles.image} />}
           {title}
         </ModalHeader>
       )}
@@ -67,5 +61,5 @@ export const ArbolusModal: React.FC<ArbolusModalProps> = ({
         </div>
       </ModalFooter>
     </Modal>
-  );
-};
+  )
+}

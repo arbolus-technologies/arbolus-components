@@ -1,49 +1,42 @@
-import { Story, Meta } from '@storybook/react';
-import React from 'react';
-import { Button, ButtonProps } from './Button';
+import { Story, Meta } from '@storybook/react'
+import React from 'react'
+import { Button, ButtonProps } from './Button'
 
 export default {
   component: Button,
   title: 'Button',
   argTypes: {
     type: {
-        name: 'type',
-        type: { name: 'string', required: false },
-        description: 'Button type',
-        defaultValue: 'primary',
-        table: {
-            type: 'string',
-            defaultValue: { summary: 'primary' },
-          },
-        control: { type: "select", options: ['primary'
-        ,'secondary'
-        ,'tertiary'
-        ,'danger'
-        ,'success'
-        ,'tab'
-        ,'iconButton'] }
-        
+      name: 'type',
+      type: { name: 'string', required: false },
+      description: 'Button type',
+      defaultValue: 'primary',
+      table: {
+        type: 'string',
+        defaultValue: { summary: 'primary' },
+      },
+      control: {
+        type: 'select',
+        options: ['primary', 'secondary', 'tertiary', 'danger', 'success', 'tab', 'iconButton'],
+      },
     },
     nativeType: {
-      control: { type: "select", options: ['button'
-        ,'submit'
-        ,'reset'
-       ] }
+      control: { type: 'select', options: ['button', 'submit', 'reset'] },
     },
     disabled: {
-        defaultValue: false,
-    }, 
+      defaultValue: false,
+    },
     activeTab: {
-        name: 'activeTab',
-        type: { name: 'boolean', required: false },
-        defaultValue: false,
-        description: 'We use this when button when type === tab',
-        table: {
-          defaultValue: { summary: 'false' },
-        },
-        control: {
-          type: 'boolean'
-        }
+      name: 'activeTab',
+      type: { name: 'boolean', required: false },
+      defaultValue: false,
+      description: 'We use this when button when type === tab',
+      table: {
+        defaultValue: { summary: 'false' },
+      },
+      control: {
+        type: 'boolean',
+      },
     },
     startIcon: {
       type: { name: 'string', required: false },
@@ -55,53 +48,52 @@ export default {
     },
     centerIcon: {
       type: { name: 'string', required: false },
-      description: 'startIcon | endIcon | centerIcon -- Will not show text, only working with type = icon',
-    }
-  }
-} as Meta;
+      description:
+        'startIcon | endIcon | centerIcon -- Will not show text, only working with type = icon',
+    },
+  },
+} as Meta
 
-const Template: Story<ButtonProps> = args => <Button {...args} />;
+const Template: Story<ButtonProps> = (args) => <Button {...args} />
 
-export const Primary: Story<ButtonProps> = Template.bind({});
+export const Primary: Story<ButtonProps> = Template.bind({})
 Primary.args = {
   activeTab: false,
   disabled: false,
-  text: "Primary Button",
-  nativeType:"button",
+  text: 'Primary Button',
+  nativeType: 'button',
   type: 'primary',
   onClick: () => console.log('click'),
-};
+}
 
-export const Secondary: Story<ButtonProps> = Template.bind({});
+export const Secondary: Story<ButtonProps> = Template.bind({})
 Secondary.args = {
   activeTab: false,
   disabled: false,
-  text: "Secondary Button",
-  nativeType:"button",
+  text: 'Secondary Button',
+  nativeType: 'button',
   type: 'secondary',
   onClick: () => console.log('click'),
-};
+}
 
-export const SuccessWithEndIcon: Story<ButtonProps> = Template.bind({});
+export const SuccessWithEndIcon: Story<ButtonProps> = Template.bind({})
 SuccessWithEndIcon.args = {
   activeTab: false,
   disabled: false,
-  text: "Success Button",
+  text: 'Success Button',
   endIcon: 'add',
-  nativeType:"button",
+  nativeType: 'button',
   type: 'success',
   onClick: () => console.log('click'),
-};
+}
 
-export const DangerWithStartIcon: Story<ButtonProps> = Template.bind({});
+export const DangerWithStartIcon: Story<ButtonProps> = Template.bind({})
 DangerWithStartIcon.args = {
   activeTab: false,
   disabled: false,
-  text: "Danger Button",
+  text: 'Danger Button',
   startIcon: 'chevron_left',
-  nativeType:"button",
+  nativeType: 'button',
   type: 'danger',
   onClick: () => console.log('click'),
-};
-
-
+}
