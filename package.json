@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@storybook/addon-viewport": "^6.5.16",
-    "@storybook/react-vite": "^7.0.5",
+    "@storybook/react-vite": "^7.0.6",
     "bootstrap": "^5.2.3",
     "classnames": "^2.3.2",
     "material-symbols": "^0.5.0",
