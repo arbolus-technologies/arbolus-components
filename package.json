@@ -6,13 +6,13 @@
   "scripts": {
     "start": "vite --port 3000",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "npx chromatic --exit-zero-on-changes -d storybook-static/ --project-token=fd430b667236",
+    "storybook": "storybook dev",
+    "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=fd430b667236"
   },
   "dependencies": {
     "@storybook/addon-viewport": "^6.5.16",
+    "@storybook/react-vite": "^7.0.5",
     "bootstrap": "^5.2.3",
     "classnames": "^2.3.2",
     "material-symbols": "^0.5.0",
@@ -23,16 +23,17 @@
     "sass": "^1.59.2"
   },
   "devDependencies": {
+    "storybook": "next",
     "@babel/core": "^7.21.0",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-interactions": "^6.5.16",
-    "@storybook/addon-links": "^6.5.16",
-    "@storybook/addons": "^6.5.16",
-    "@storybook/builder-vite": "^0.4.2",
-    "@storybook/react": "^6.5.16",
-    "@storybook/testing-library": "^0.0.13",
-    "@storybook/theming": "^6.5.16",
+    "@storybook/addon-actions": "latest",
+    "@storybook/addon-essentials": "latest",
+    "@storybook/addon-interactions": "latest",
+    "@storybook/addon-links": "latest",
+    "@storybook/addons": "latest",
+    "@storybook/builder-vite": "latest",
+    "@storybook/react": "latest",
+    "@storybook/testing-library": "latest",
+    "@storybook/theming": "latest",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
@@ -49,7 +50,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.8.4",
     "typescript": "^4.9.3",
-    "vite": "^4.1.0"
+    "vite": "latest"
   },
   "readme": "ERROR: No README data found!",
   "_id": "arbolus-components@0.0.0"

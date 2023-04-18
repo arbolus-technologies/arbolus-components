@@ -1,11 +1,13 @@
 // .storybook/main.ts
 
-import type { StorybookViteConfig } from '@storybook/builder-vite';
+import type { StorybookConfig } from '@storybook/react-vite';
+
 import path from 'path';
 import { mergeConfig } from 'vite';
 
 
-const config: StorybookViteConfig = {
+const config: StorybookConfig = {
+  framework: '@storybook/react-vite',
   stories: ['../src/components/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   core: {
