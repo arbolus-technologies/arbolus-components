@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "npx chromatic --exit-zero-on-changes -d storybook-static/",
+    "build-storybook": "npx chromatic --exit-zero-on-changes -d storybook-static/ --project-token=fd430b667236",
     "chromatic": "npx chromatic --project-token=fd430b667236"
   },
   "dependencies": {
