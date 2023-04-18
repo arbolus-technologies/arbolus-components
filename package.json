@@ -4,12 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite --port 3000",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "npx chromatic --exit-zero-on-changes -d storybook-static/ --project-token=fd430b667236",
-    "chromatic": "npx chromatic --project-token=fd430b667236"
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider vite --port 3000",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider tsc && vite build",
+    "preview": "cross-env NODE_OPTIONS=--openssl-legacy-provider vite preview",
+    "storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
+    "build-storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider npx chromatic --exit-zero-on-changes -d storybook-static/ --project-token=fd430b667236",
+    "chromatic": "cross-env NODE_OPTIONS=--openssl-legacy-provider npx chromatic --project-token=fd430b667236"
   },
   "dependencies": {
     "@storybook/addon-viewport": "^6.5.16",
