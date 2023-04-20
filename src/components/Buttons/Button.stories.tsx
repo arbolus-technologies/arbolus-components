@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { StoryFn, Meta } from '@storybook/react'
 import React from 'react'
 import { Button, ButtonProps } from './Button'
 
@@ -54,9 +54,9 @@ export default {
   },
 } as Meta
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />
+const Template: StoryFn<ButtonProps> = (args) => <Button {...args} />
 
-export const Primary: Story<ButtonProps> = Template.bind({})
+export const Primary: StoryFn<ButtonProps> = Template.bind({})
 Primary.args = {
   activeTab: false,
   disabled: false,
@@ -66,7 +66,7 @@ Primary.args = {
   onClick: () => console.log('click'),
 }
 
-export const Secondary: Story<ButtonProps> = Template.bind({})
+export const Secondary: StoryFn<ButtonProps> = Template.bind({})
 Secondary.args = {
   activeTab: false,
   disabled: false,
@@ -76,7 +76,7 @@ Secondary.args = {
   onClick: () => console.log('click'),
 }
 
-export const SuccessWithEndIcon: Story<ButtonProps> = Template.bind({})
+export const SuccessWithEndIcon: StoryFn<ButtonProps> = Template.bind({})
 SuccessWithEndIcon.args = {
   activeTab: false,
   disabled: false,
@@ -87,7 +87,7 @@ SuccessWithEndIcon.args = {
   onClick: () => console.log('click'),
 }
 
-export const DangerWithStartIcon: Story<ButtonProps> = Template.bind({})
+export const DangerWithStartIcon: StoryFn<ButtonProps> = Template.bind({})
 DangerWithStartIcon.args = {
   activeTab: false,
   disabled: false,

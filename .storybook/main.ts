@@ -13,6 +13,10 @@ const config: StorybookConfig = {
   core: {
     builder: '@storybook/builder-vite',
   },
+  docs: {
+    autodocs: true, // see below for alternatives
+    defaultName: 'Docs', // set to change the name of generated docs entries
+  },
   typescript: {
     reactDocgen: 'react-docgen', // 👈 react-docgen configured here.
   },
