@@ -10,6 +10,9 @@ export default {
       options: ['primary', 'secondary', 'tertiary', 'danger', 'success', 'tab', 'iconButton'],
       control: { type: 'select' },
       defaultValue: 'primary',
+      table: {
+        type: { summary: 'select' },
+      },
     },
     onClick: {
       action: 'clicked',
@@ -127,7 +130,7 @@ export const WithEndIcon = Template.bind({})
 WithEndIcon.args = {
   type: 'primary',
   text: 'Button with end icon',
-  endIcon: 'menu',
+  endIcon: 'chevron_right',
 }
 
 export const WithCenterIcon = Template.bind({})

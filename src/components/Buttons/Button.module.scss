@@ -12,111 +12,113 @@
   outline: none !important;
   justify-content: space-between;
   line-height: 24px;
+  min-width: fit-content;
 }
 
 .primary {
   @extend .resetDefaultButtonStyle;
-  background: $primary-purple;
-  color: $primary-white;
+  background: $bColorBasePurple;
+  color: $bColorBaseWhite;
 
   &:hover {
-    background: $b-color-accent-purple-dark;
+    background: $bColorAccentPurpleDark;
   }
 
   &:disabled {
-    background: $b-color-primary-purple-disabled;
+    background: $bColorPrimaryPurpleDisabled;
   }
 }
 
 .secondary {
   @extend .resetDefaultButtonStyle;
-  border: 1px solid $primary-purple;
-  background: $primary-white;
-  color: $primary-purple;
+  border: 1px solid $bColorBasePurple;
+  background: $bColorBaseWhite;
+  color: $bColorBasePurple;
 
   &:hover {
-    color: $b-color-accent-purple-dark;
-    border: 1px solid $b-color-accent-purple-dark;
+    color: $bColorAccentPurpleDark;
+    border: 1px solid $bColorAccentPurpleDark;
   }
 
   &:disabled {
-    color: $b-color-primary-purple-disabled;
-    border: 1px solid $b-color-primary-purple-disabled;
+    color: $bColorPrimaryPurpleDisabled;
+    border: 1px solid $bColorPrimaryPurpleDisabled;
   }
 }
 
 .tertiary {
   @extend .resetDefaultButtonStyle;
-  background: $primary-white;
-  color: $primary-purple;
+  background: $bColorBaseWhite;
+  color: $bColorBasePurple;
+  padding: 0;
 
   &:hover {
-    color: $b-color-accent-purple-dark;
+    color: $bColorAccentPurpleDark;
   }
 
   &:disabled {
-    color: $b-color-primary-purple-disabled;
+    color: $bColorPrimaryPurpleDisabled;
   }
 }
 
 .success {
   @extend .resetDefaultButtonStyle;
-  background: $secondary-green;
-  color: $primary-white;
+  background: $bColorSecondaryGreen;
+  color: $bColorBaseWhite;
 
   &:hover {
-    background: $b-color-success;
+    background: $bColorSuccess;
   }
 
   &:disabled {
-    background: $b-color-success-disabled;
+    background: $bColorSuccessDisabled;
   }
 }
 
 .danger {
   @extend .resetDefaultButtonStyle;
-  background: $secondary-deep-orange;
-  color: $primary-white;
+  background: $bColorBaseOrange;
+  color: $bColorBaseWhite;
 
   &:hover {
-    background: $b-danger-hover;
+    background: $bDangerHover;
   }
 
   &:disabled {
-    background: $b-danger-disabled;
+    background: $bDangerDisabled;
   }
 }
 
 .tab {
   @extend .resetDefaultButtonStyle;
-  background: $primary-white;
-  border: 1px solid $primary-dark-blue;
+  background: $bColorBaseWhite;
+  border: 1px solid $bColorBaseDark1;
 
   &:hover {
-    background: $secondary-light-grey;
+    background: $bColorSecondaryGreyLight;
   }
 }
 
 .activeTab {
   @extend .resetDefaultButtonStyle;
-  background: $primary-dark-blue;
-  color: $primary-white;
+  background: $bColorBaseDark1;
+  color: $bColorBaseWhite;
   font-weight: $weight-light;
 
   &:hover {
-    background: $primary-dark-blue;
+    background: $bColorBaseDark1;
   }
 
   &:disabled {
-    background: $primary-dark-blue;
+    background: $bColorBaseDark1;
   }
 }
 
 .iconButton {
   @extend .resetDefaultButtonStyle;
-  border: 1px solid $primary-purple;
-  background: $primary-white;
-  color: $primary-purple;
+  border: 1px solid $bColorBasePurple;
+  background: $bColorBaseWhite;
+  color: $bColorBasePurple;
   padding: 8px;
   min-width: 40px;
   min-height: 40px;
@@ -124,13 +126,13 @@
   max-height: 40px;
 
   &:hover {
-    color: $b-color-accent-purple-dark;
-    border: 1px solid $b-color-accent-purple-dark;
+    color: $bColorAccentPurpleDark;
+    border: 1px solid $bColorAccentPurpleDark;
   }
 
   &:disabled {
-    color: $b-color-primary-purple-disabled;
-    border: 1px solid $b-color-primary-purple-disabled;
+    color: $bColorPrimaryPurpleDisabled;
+    border: 1px solid $bColorPrimaryPurpleDisabled;
   }
 }
 

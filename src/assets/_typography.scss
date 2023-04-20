@@ -6,6 +6,7 @@ $secondary-font: 'OpenSans', sans-serif;
 $tertiary-font: 'Georgia', serif;
 $icon-font: 'ciq-icon-set';
 
+$weight-semi-light: 300;
 $weight-light: 400;
 $weight-regular: 500;
 $weight-semi-bold: 600;
@@ -56,7 +57,7 @@ h1 {
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;
-  color: $primary-dark-blue;
+  color: $bColorBaseDark1;
 
   margin-bottom: 10px;
 }
@@ -67,7 +68,7 @@ h2 {
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;
-  color: $primary-dark-blue;
+  color: $bColorBaseDark1;
 
   margin-bottom: 10px;
 }
@@ -75,7 +76,7 @@ h2 {
 h3 {
   font-size: $size-title-small;
   font-weight: $weight-semi-bold;
-  color: $primary-dark-blue;
+  color: $bColorBaseDark1;
 
   margin-bottom: 20px;
 }
@@ -83,7 +84,7 @@ h3 {
 h4 {
   font-size: $size-title-extra-small;
   font-weight: $weight-semi-bold;
-  color: $primary-dark-blue;
+  color: $bColorBaseDark1;
 
   margin-bottom: 20px;
 }
