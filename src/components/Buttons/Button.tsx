@@ -22,6 +22,7 @@ export interface ButtonProps {
   activeTab?: boolean
   nativeType?: 'submit' | 'reset' | 'button'
   centerIcon?: string
+  testId?: string
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -34,6 +35,7 @@ export const Button: React.FC<ButtonProps> = ({
   activeTab,
   nativeType = 'button',
   centerIcon,
+  testId,
 }) => (
   <button
     className={classNames(
@@ -45,6 +47,7 @@ export const Button: React.FC<ButtonProps> = ({
     onClick={onClick}
     disabled={disabled}
     type={nativeType}
+    data-testid={testId}
   >
     {startIcon && (
       <span className={classNames('material-symbols-sharp', styles.icon, styles.startIconMargin)}>
