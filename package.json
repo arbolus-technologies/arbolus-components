@@ -1,7 +1,7 @@
 {
   "name": "@arbolus/ui-components",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.0-development",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -24,7 +24,8 @@
     "storybook": "storybook dev",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=fd430b667236",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@storybook/addon-viewport": "^7.0.6",
@@ -73,7 +74,12 @@
     "prettier": "^2.8.4",
     "storybook": "^7.0.6",
     "typescript": "^5.0.4",
-    "vite": "^4.3.1"
+    "vite": "^4.3.1",
+    "semantic-release": "^21.0.1"
   },
-  "readme": "ERROR: No README data found!"
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JosepSalvat/arbolus-components.git"
+  }
 }
