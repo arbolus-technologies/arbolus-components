@@ -1,6 +1,8 @@
 import { StoryFn, Meta } from '@storybook/react'
 import React from 'react'
 import { Button, ButtonProps } from './Button'
+import { within, userEvent } from '@storybook/testing-library'
+import { expect, jest } from '@storybook/jest'
 
 export default {
   title: 'Button',
@@ -80,7 +82,7 @@ export const Primary = Template.bind({})
 Primary.args = {
   text: 'Primary Button',
   disabled: false,
-  onClick: () => console.log('clicked'),
+  onClick: jest.fn(),
 }
 
 export const Secondary = Template.bind({})
@@ -137,4 +139,10 @@ export const WithCenterIcon = Template.bind({})
 WithCenterIcon.args = {
   type: 'primary',
   centerIcon: 'menu',
+}
+
+Primary.play = async ({ args, canvasElement }) => {
+  const canvas = within(canvasElement)
+  await userEvent.click(canvas.getByRole('button'))
+  await expect(args.onClick).toHaveBeenCalled()
 }
