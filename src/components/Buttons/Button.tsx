@@ -54,6 +54,7 @@ export const Button: React.FC<ButtonProps> = ({
         {startIcon}
       </span>
     )}
+
     {text ? (
       text
     ) : (
