@@ -1,14 +1,30 @@
 {
-  "name": "arbolus-components",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@arbolus/ui-components",
+  "private": false,
+  "version": "0.0.2",
   "type": "module",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "vite --port 3000",
     "build": "tsc && vite build",
     "storybook": "storybook dev",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=fd430b667236"
+    "chromatic": "npx chromatic --project-token=fd430b667236",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "@storybook/addon-viewport": "^7.0.6",
@@ -18,13 +34,15 @@
     "bootstrap": "^5.2.3",
     "classnames": "^2.3.2",
     "material-symbols": "^0.5.0",
+    "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.5",
     "react-i18next": "^12.2.0",
     "react-transition-group": "^4.4.5",
     "reactstrap": "^9.1.6",
-    "sass": "^1.59.2"
+    "sass": "^1.59.2",
+    "vite-plugin-dts": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
@@ -53,9 +71,9 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.8.4",
+    "storybook": "^7.0.6",
     "typescript": "^5.0.4",
-    "vite": "^4.3.1",
-    "storybook": "^7.0.6"
+    "vite": "^4.3.1"
   },
   "readme": "ERROR: No README data found!",
   "_id": "arbolus-components@0.0.0"
