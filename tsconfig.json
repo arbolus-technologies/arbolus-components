@@ -18,8 +18,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "declaration": true,
-    "typeRoots": ["node_modules/@types", "src/types"],
-    // "typeRoots": ["./dist/index.d.ts"]
+    "typeRoots": ["./dist/index.d.ts"]
   },
-  "include": ["src", "types", "./index.ts"]
+  "include": ["src", "./index.ts"]
 }
