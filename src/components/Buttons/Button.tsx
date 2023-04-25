@@ -31,7 +31,7 @@ export const Button: React.FC<ButtonProps> = ({
   startIcon,
   endIcon,
   type = 'primary',
-  disabled,
+  disabled = false,
   activeTab,
   nativeType = 'button',
   centerIcon,
