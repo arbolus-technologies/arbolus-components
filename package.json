@@ -82,6 +82,14 @@
       "master"
     ]
   },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/changelog",
+    "@semantic-release/npm",
+    "@semantic-release/git",
+    "@semantic-release/github"
+  ],
+  "preset": "react",
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
