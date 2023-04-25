@@ -17,7 +17,7 @@ export const Icon: React.FC<IconProps> = ({
   iconName,
   color,
   fontSize,
-  filled,
+  filled = false,
   onClick,
   customClasses,
   style,
