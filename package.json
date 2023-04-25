@@ -77,6 +77,11 @@
     "vite": "^4.3.1",
     "semantic-release": "^21.0.1"
   },
+  "release": {
+    "branches": [
+      "master"
+    ]
+  },
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
