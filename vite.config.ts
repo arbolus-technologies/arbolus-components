@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'index.ts'),
-      name: '@arbolus/ui-components',
+      name: 'arbolus-ui-components',
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
