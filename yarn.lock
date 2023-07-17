@@ -7630,10 +7630,10 @@ marked@^4.1.0:
   resolved "https://registry.yarnpkg.com/marked/-/marked-4.3.0.tgz#796362821b019f734054582038b116481b456cf3"
   integrity sha512-PRsaiG84bK+AMvxziE/lCFss8juXjNaWzVbN5tXAm4XjeaS9NAHhop+PjQxz2A9h8Q4M/xGmzP8vqNwy6JeK0A==
 
-material-symbols@^0.5.0:
-  version "0.5.5"
-  resolved "https://registry.yarnpkg.com/material-symbols/-/material-symbols-0.5.5.tgz#af44b54c39a5c89ab7ba33362cf97251373dc735"
-  integrity sha512-NFUsjEVBNZvcRRqslY0RWnmlGgjhJkpDQkQs42o52gT2AmIbaP6V7wTRgyTkLAoD5VtpgpIx9eoOAXcH2ynwkg==
+material-symbols@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/material-symbols/-/material-symbols-0.10.0.tgz#bf5ea0317c670df77877138ea46aa35b207ba077"
+  integrity sha512-/C4LI/s8o1lz1M4AUA0qVQ3zqYGe3eF30ftRrtT48OY3pGOmScJFZo0TX0CGhoRNF2D59PNrpoccAyBBmtXoig==
 
 mdast-util-definitions@^4.0.0:
   version "4.0.0"
