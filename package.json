@@ -83,7 +83,18 @@
     ]
   },
   "plugins": [
-    "@semantic-release/commit-analyzer",
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "conventionalcommits",
+        "releaseRules": [
+          {
+            "type": "*!",
+            "release": "major"
+          }
+        ]
+      }
+    ],
     "@semantic-release/changelog",
     "@semantic-release/npm",
     "@semantic-release/git",
