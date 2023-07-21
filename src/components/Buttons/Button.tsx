@@ -10,6 +10,7 @@ export type ButtonType =
   | 'success'
   | 'tab'
   | 'iconButton'
+  | 'test'
 
 export interface ButtonProps {
   text?: string
