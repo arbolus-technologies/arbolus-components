@@ -1,0 +1,14 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "Arbolus"
+  ],
+  "flagWords": [
+    "shit"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    "cspell.json"
+  ]
+}
