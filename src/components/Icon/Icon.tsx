@@ -1,4 +1,4 @@
-import classNames from 'classnames'
+import clsx from 'clsx'
 import React from 'react'
 import styles from './Icon.module.scss'
 
@@ -22,7 +22,7 @@ export const Icon: React.FC<IconProps> = ({
   customClasses,
   style,
   id,
-  tooltip,
+  tooltip
 }) => (
   <span
     data-testid='icon'
@@ -31,12 +31,12 @@ export const Icon: React.FC<IconProps> = ({
       ...style,
       fontSize,
       color,
-      cursor: onClick ? 'pointer' : 'default',
+      cursor: onClick ? 'pointer' : 'default'
     }}
-    className={classNames('material-symbols-sharp icon', customClasses, {
-      [styles.filled]: filled,
+    className={clsx('material-symbols-sharp icon', customClasses, {
+      [styles.filled]: filled
     })}
-    id={id ? id : 'icon'}
+    id={id ?? 'icon'}
     title={tooltip}
   >
     {iconName}

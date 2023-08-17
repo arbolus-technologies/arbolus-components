@@ -8,19 +8,19 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'index.ts'),
       name: 'arbolus-ui-components',
-      fileName: (format) => `index.${format}.js`,
+      fileName: (format) => `index.${format}.js`
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
       output: {
         globals: {
           react: 'React',
-          'react-dom': 'ReactDOM',
-        },
-      },
+          'react-dom': 'ReactDOM'
+        }
+      }
     },
     sourcemap: true,
-    emptyOutDir: true,
+    emptyOutDir: true
   },
   plugins: [react(), dts()],
 
@@ -30,8 +30,8 @@ export default defineConfig({
         additionalData: `
           @import "./src/assets/_variables.scss";
           @import "./src/assets/_typography.scss";
-        `,
-      },
-    },
-  },
+        `
+      }
+    }
+  }
 })
