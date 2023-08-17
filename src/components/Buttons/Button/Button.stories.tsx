@@ -1,5 +1,6 @@
 import { jest } from '@storybook/jest'
 import { Meta, StoryObj } from '@storybook/react'
+import { userEvent, within } from '@storybook/testing-library'
 import { Button, ButtonProps } from './Button'
 
 const meta: Meta<ButtonProps> = {
@@ -97,4 +98,10 @@ export const Rejection: Story = {
     text: 'Rejection',
     type: 'rejection'
   }
+}
+
+Primary.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement)
+  const button = canvas.getByRole('button')
+  await userEvent.click(button)
 }
