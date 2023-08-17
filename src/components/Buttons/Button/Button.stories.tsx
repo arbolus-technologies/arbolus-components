@@ -22,11 +22,7 @@ const meta: Meta<ButtonProps> = {
       }
     },
     onClick: {
-      action: 'clicked',
-      table: {
-        defaultValue: { summary: '() => console.log("click")' },
-        type: { summary: 'function' }
-      }
+      action: 'clicked'
     },
     disabled: {
       control: 'boolean',
@@ -65,6 +61,11 @@ export const Primary: Story = {
     disabled: false,
     nativeType: 'button',
     type: 'primary'
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button')
+    await userEvent.click(button)
   }
 }
 
@@ -98,10 +99,4 @@ export const Rejection: Story = {
     text: 'Rejection',
     type: 'rejection'
   }
-}
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement)
-  const button = canvas.getByRole('button')
-  await userEvent.click(button)
 }
