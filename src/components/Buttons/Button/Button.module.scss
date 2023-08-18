@@ -1,0 +1,102 @@
+.baseButton {
+  all: unset; // Reset default button style
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  min-width: fit-content;
+}
+
+.text {
+  font-size: $size-regular; // 14px
+  font-weight: $weight-semi-bold; // 600
+  line-height: 24px;
+  margin: 0;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.startIcon {
+  padding-right: 8px;
+}
+
+.endIcon {
+  padding-left: 8px;
+}
+
+.primary {
+  @extend .baseButton;
+  background-color: $bColorBasePurple;
+  color: $bColorBaseWhite;
+
+  &:hover {
+    background-color: $bColorAccentPurpleDark;
+  }
+
+  &:disabled {
+    background-color: $bColorPrimaryPurpleDisabled;
+  }
+}
+
+.secondary {
+  @extend .baseButton;
+  border: 1px solid $bColorBasePurple;
+  background-color: $bColorBaseWhite;
+  color: $bColorBasePurple;
+
+  &:hover {
+    color: $bColorAccentPurpleDark;
+    border: 1px solid $bColorAccentPurpleDark;
+  }
+
+  &:disabled {
+    color: $bColorPrimaryPurpleDisabled;
+    border: 1px solid $bColorPrimaryPurpleDisabled;
+  }
+}
+
+.tertiary {
+  @extend .baseButton;
+  background-color: $bColorBaseWhite;
+  color: $bColorBasePurple;
+  padding: 0;
+
+  &:hover {
+    color: $bColorAccentPurpleDark;
+  }
+
+  &:disabled {
+    color: $bColorPrimaryPurpleDisabled;
+  }
+}
+
+.confirmation {
+  @extend .baseButton;
+  background-color: $bColorSecondaryGreen;
+  color: $bColorBaseWhite;
+
+  &:hover {
+    background-color: $bColorSuccess;
+  }
+
+  &:disabled {
+    background-color: $bColorSuccessDisabled;
+  }
+}
+
+.rejection {
+  @extend .baseButton;
+  background-color: $bColorBaseOrange;
+  color: $bColorBaseWhite;
+
+  &:hover {
+    background-color: $bDangerHover;
+  }
+
+  &:disabled {
+    background-color: $bDangerDisabled;
+  }
+}

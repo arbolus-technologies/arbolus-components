@@ -1,8 +1,8 @@
-import classnames from 'classnames'
+import clsx from 'clsx'
 import React from 'react'
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap'
 import styles from './InternalArbolusModal.module.scss'
-import { Button, ButtonType } from '../Buttons/Button'
+import { Button, ButtonType } from '../Buttons/Button/Button'
 
 interface ModalButton {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -39,11 +39,11 @@ export const InternalArbolusModal: React.FC<Props> = ({
   iconTitle,
   leftButton,
   rightButton,
-  size = 'sm',
+  size = 'sm'
 }) => (
   <Modal
     isOpen={isOpen}
-    className={classnames('modal-alert', styles.container, styles[size])}
+    className={clsx('modal-alert', styles.container, styles[size])}
     toggle={toggle}
   >
     {title && (
@@ -55,8 +55,8 @@ export const InternalArbolusModal: React.FC<Props> = ({
     {body || <ModalBody className={styles.subtitle}>{subtitle}</ModalBody>}
     <ModalFooter className={styles.footer}>
       <div className={styles.buttonsContainer}>
-        <Button {...leftButton} />
-        <Button {...rightButton} />
+        {/* <Button {...leftButton} />
+        <Button {...rightButton} /> */}
       </div>
     </ModalFooter>
   </Modal>
