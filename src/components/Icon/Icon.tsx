@@ -2,43 +2,38 @@ import clsx from 'clsx'
 import React from 'react'
 import styles from './Icon.module.scss'
 
-interface IconProps {
-  iconName: string
+export interface IconProps {
+  name: string
   fontSize: string
   color?: string
   filled?: boolean
   onClick?: () => void
-  customClasses?: string
-  style?: React.CSSProperties
-  id?: string
   tooltip?: string
+  id?: string
 }
 export const Icon: React.FC<IconProps> = ({
-  iconName,
-  color,
+  name,
   fontSize,
+  color = '#000a3f',
   filled = false,
   onClick,
-  customClasses,
-  style,
-  id,
-  tooltip
+  tooltip,
+  id
 }) => (
   <span
-    data-testid='icon'
+    id={id}
     onClick={onClick}
     style={{
-      ...style,
       fontSize,
       color,
-      cursor: onClick ? 'pointer' : 'default'
+      cursor: onClick ? 'pointer' : 'default',
+      userSelect: 'none'
     }}
-    className={clsx('material-symbols-sharp icon', customClasses, {
+    className={clsx('material-symbols-sharp icon', {
       [styles.filled]: filled
     })}
-    id={id ?? 'icon'}
     title={tooltip}
   >
-    {iconName}
+    {name}
   </span>
 )

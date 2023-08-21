@@ -1,52 +1,71 @@
-import { jest } from '@storybook/jest'
 import { Meta, StoryObj } from '@storybook/react'
 import { userEvent, within } from '@storybook/testing-library'
 import { Button, ButtonProps } from './Button'
 
 const meta: Meta<ButtonProps> = {
-  title: 'Button',
+  title: 'Design System/Buttons/Button',
   component: Button,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'This component is the base Button which should be used whenever there is an action required. It is not allowed to wrap the component or overwrite the inherit styling.'
+      }
+    }
+  },
   argTypes: {
+    text: {
+      name: 'text*',
+      control: 'text',
+      type: 'string',
+      description: '`required` - Text within the button.'
+    },
     type: {
+      name: 'type*',
       options: ['primary', 'secondary', 'tertiary', 'confirmation', 'rejection'],
       control: { type: 'select' },
-      defaultValue: 'primary',
-      table: {
-        type: { summary: 'select' }
-      }
-    },
-    text: {
-      control: 'text',
-      table: {
-        type: { summary: 'string' }
-      }
+      description: '`required` - Different type of buttons allowed.'
     },
     onClick: {
-      action: 'clicked'
+      name: 'onClick*',
+      action: 'clicked',
+      description: '`required` - Method called on button click.'
     },
     disabled: {
+      name: 'disabled',
       control: 'boolean',
-      defaultValue: false,
+      type: 'boolean',
       table: {
-        type: { summary: 'boolean' }
-      }
+        defaultValue: { summary: false }
+      },
+      description: 'Boolean by default false that disables the button.'
     },
     nativeType: {
+      name: 'nativeType',
       options: ['submit', 'reset', 'button'],
       control: { type: 'select' },
-      defaultValue: 'button'
+      table: {
+        defaultValue: { summary: 'button' }
+      },
+      description: 'Button native type. By default is `button`.'
     },
     startIcon: {
+      name: 'startIcon',
       control: 'text',
-      table: {
-        type: { summary: 'string' }
-      }
+      type: 'string',
+      description: 'Icon name that is positioned at the beginning of the button text.'
     },
     endIcon: {
+      name: 'endIcon',
       control: 'text',
-      table: {
-        type: { summary: 'string' }
-      }
+      type: 'string',
+      description: 'Icon name that is positioned at the end of the button text.'
+    },
+    id: {
+      name: 'id',
+      control: 'text',
+      type: 'string',
+      description: 'Button id.'
     }
   }
 }
@@ -57,10 +76,9 @@ type Story = StoryObj<typeof Button>
 export const Primary: Story = {
   args: {
     text: 'Primary',
-    onClick: jest.fn(),
-    disabled: false,
+    type: 'primary',
     nativeType: 'button',
-    type: 'primary'
+    disabled: false
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
