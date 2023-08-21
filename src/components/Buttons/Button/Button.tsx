@@ -1,8 +1,7 @@
 import React from 'react'
 import { Icon } from '../../Icon/Icon'
 import styles from './Button.module.scss'
-
-export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'confirmation' | 'rejection'
+import { ButtonType } from '../../../models/types'
 
 export interface ButtonProps {
   text: string
