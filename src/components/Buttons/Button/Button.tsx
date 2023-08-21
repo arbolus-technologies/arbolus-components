@@ -1,6 +1,6 @@
 import React from 'react'
+import { Icon } from '../../Icon/Icon'
 import styles from './Button.module.scss'
-import clsx from 'clsx'
 
 export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'confirmation' | 'rejection'
 
@@ -12,6 +12,7 @@ export interface ButtonProps {
   nativeType: 'submit' | 'reset' | 'button'
   startIcon?: string
   endIcon?: string
+  id?: string
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -21,17 +22,20 @@ export const Button: React.FC<ButtonProps> = ({
   type,
   nativeType = 'button',
   startIcon,
-  endIcon
+  endIcon,
+  id
 }) => (
-  <button onClick={onClick} disabled={disabled} type={nativeType} className={styles[type]}>
+  <button onClick={onClick} disabled={disabled} type={nativeType} className={styles[type]} id={id}>
     {startIcon && (
-      <span className={clsx('material-symbols-sharp', styles.icon, styles.startIcon)}>
-        {startIcon}
-      </span>
+      <div className={styles.startIcon}>
+        <Icon name={startIcon} fontSize='20px' />
+      </div>
     )}
     <p className={styles.text}>{text}</p>
     {endIcon && (
-      <span className={clsx('material-symbols-sharp', styles.icon, styles.endIcon)}>{endIcon}</span>
+      <div className={styles.endIcon}>
+        <Icon name={endIcon} fontSize='20px' />
+      </div>
     )}
   </button>
 )

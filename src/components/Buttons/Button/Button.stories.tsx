@@ -1,10 +1,9 @@
-import { jest } from '@storybook/jest'
 import { Meta, StoryObj } from '@storybook/react'
 import { userEvent, within } from '@storybook/testing-library'
 import { Button, ButtonProps } from './Button'
 
 const meta: Meta<ButtonProps> = {
-  title: 'Button',
+  title: 'Design System/Buttons/Button',
   component: Button,
   argTypes: {
     type: {
@@ -17,9 +16,7 @@ const meta: Meta<ButtonProps> = {
     },
     text: {
       control: 'text',
-      table: {
-        type: { summary: 'string' }
-      }
+      type: 'string'
     },
     onClick: {
       action: 'clicked'
@@ -27,9 +24,7 @@ const meta: Meta<ButtonProps> = {
     disabled: {
       control: 'boolean',
       defaultValue: false,
-      table: {
-        type: { summary: 'boolean' }
-      }
+      type: 'boolean'
     },
     nativeType: {
       options: ['submit', 'reset', 'button'],
@@ -38,15 +33,11 @@ const meta: Meta<ButtonProps> = {
     },
     startIcon: {
       control: 'text',
-      table: {
-        type: { summary: 'string' }
-      }
+      type: 'string'
     },
     endIcon: {
       control: 'text',
-      table: {
-        type: { summary: 'string' }
-      }
+      type: 'string'
     }
   }
 }
@@ -57,7 +48,6 @@ type Story = StoryObj<typeof Button>
 export const Primary: Story = {
   args: {
     text: 'Primary',
-    onClick: jest.fn(),
     disabled: false,
     nativeType: 'button',
     type: 'primary'
