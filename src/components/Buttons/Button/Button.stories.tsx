@@ -24,7 +24,6 @@ const meta: Meta<ButtonProps> = {
       name: 'type*',
       options: ['primary', 'secondary', 'tertiary', 'confirmation', 'rejection'],
       control: { type: 'select' },
-      defaultValue: 'primary',
       description: '`required` - Different type of buttons allowed.'
     },
     onClick: {
@@ -37,7 +36,6 @@ const meta: Meta<ButtonProps> = {
       control: 'boolean',
       type: 'boolean',
       table: {
-        type: { summary: 'boolean' },
         defaultValue: { summary: false }
       },
       description: 'Boolean by default false that disables the button.'
