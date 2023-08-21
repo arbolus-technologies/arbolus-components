@@ -109,7 +109,7 @@
     ]
   ],
   "preset": "react",
-  "readme": "ERROR: No README data found!",
+  "readme": "ERROR: No READMe data found!",
   "repository": {
     "type": "git",
     "url": "https://github.com/JosepSalvat/arbolus-components.git"
