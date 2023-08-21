@@ -6,10 +6,10 @@ export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'confirmation' |
 
 export interface ButtonProps {
   text: string
-  onClick: (e: unknown) => void
-  disabled: boolean
   type: ButtonType
-  nativeType: 'submit' | 'reset' | 'button'
+  onClick: (e: unknown) => void
+  disabled?: boolean
+  nativeType?: 'submit' | 'reset' | 'button'
   startIcon?: string
   endIcon?: string
   id?: string
@@ -17,9 +17,9 @@ export interface ButtonProps {
 
 export const Button: React.FC<ButtonProps> = ({
   text,
+  type,
   onClick,
   disabled = false,
-  type,
   nativeType = 'button',
   startIcon,
   endIcon,
