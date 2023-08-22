@@ -8,7 +8,8 @@ import styles from './Button.module.scss';
 
 export interface ButtonProps {
   text: string;
-  onClick: (e: unknown) => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onClick: (e: any) => void;
   type?: ButtonType;
   disabled?: boolean;
   nativeType?: ButtonNativeType;
