@@ -9,12 +9,16 @@
   &:focus {
     outline: none !important;
   }
+  & > span {
+    cursor: pointer !important;
+  }
 }
 
 .text {
   font-size: $size-regular; // 14px
   font-weight: $weight-semi-bold; // 600
   line-height: 24px;
+  user-select: none;
   margin: 0;
   &.startIcon {
     padding-left: 8px;
