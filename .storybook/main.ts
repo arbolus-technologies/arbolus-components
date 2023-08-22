@@ -28,8 +28,8 @@ const config: StorybookConfig = {
             preprocessorOptions: {
                 scss: {
                   additionalData: `
-                    @import '../src/assets/_variables.scss';
-                    @import '../src/assets/_typography.scss';
+                    @import '../src/theme/sass/_variables.scss';
+                    @import '../src/theme/sass/_typography.scss';
                   `
                 },
             },

@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import { ButtonTypeEnum } from '../../../models/enums';
 import { ButtonNativeType, ButtonType } from '../../../models/types';
+import { ARBOLUS_COLORS } from '../../../theme/colors/colorConstants';
 import { Icon } from '../../Icon/Icon';
 import styles from './Button.module.scss';
 
@@ -31,12 +32,14 @@ export const Button: React.FC<ButtonProps> = ({
   id
 }) => {
   const { primary, secondary, tertiary, confirmation, rejection } = ButtonTypeEnum;
+  const { bColorBaseWhite, bColorBasePurple } = ARBOLUS_COLORS;
+
   const iconColor: IconColor = {
-    [primary]: '#ffffff',
-    [secondary]: '#6157fc',
-    [tertiary]: '#6157fc',
-    [confirmation]: '#ffffff',
-    [rejection]: '#ffffff'
+    [primary]: bColorBaseWhite,
+    [secondary]: bColorBasePurple,
+    [tertiary]: bColorBasePurple,
+    [confirmation]: bColorBaseWhite,
+    [rejection]: bColorBaseWhite
   };
 
   return (
