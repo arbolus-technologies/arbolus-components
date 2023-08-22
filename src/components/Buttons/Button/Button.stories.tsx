@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react'
-import { userEvent, within } from '@storybook/testing-library'
-import { Button, ButtonProps } from './Button'
+import { Meta, StoryObj } from '@storybook/react';
+import { userEvent, within } from '@storybook/testing-library';
+import { Button, ButtonProps } from './Button';
 
 const meta: Meta<ButtonProps> = {
   title: 'Design System/Buttons/Button',
@@ -68,10 +68,10 @@ const meta: Meta<ButtonProps> = {
       description: 'Button id.'
     }
   }
-}
+};
 
-export default meta
-type Story = StoryObj<typeof Button>
+export default meta;
+type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
@@ -81,11 +81,11 @@ export const Primary: Story = {
     disabled: false
   },
   play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    const button = canvas.getByRole('button')
-    await userEvent.click(button)
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
   }
-}
+};
 
 export const Secondary: Story = {
   args: {
@@ -93,7 +93,7 @@ export const Secondary: Story = {
     text: 'Secondary',
     type: 'secondary'
   }
-}
+};
 
 export const Tertiary: Story = {
   args: {
@@ -101,7 +101,7 @@ export const Tertiary: Story = {
     text: 'Tertiary',
     type: 'tertiary'
   }
-}
+};
 
 export const Confirmation: Story = {
   args: {
@@ -109,7 +109,7 @@ export const Confirmation: Story = {
     text: 'Confirmation',
     type: 'confirmation'
   }
-}
+};
 
 export const Rejection: Story = {
   args: {
@@ -117,4 +117,4 @@ export const Rejection: Story = {
     text: 'Rejection',
     type: 'rejection'
   }
-}
+};

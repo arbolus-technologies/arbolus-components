@@ -23,6 +23,7 @@
     ],
     "rules": {
         "no-duplicate-imports": "error",
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "max-lines": ["warn", {"max": 300, "skipComments": true, "skipBlankLines": true}]
     }
 }
