@@ -1,16 +1,16 @@
+import clsx from 'clsx';
 import React from 'react';
+import { ButtonTypeEnum } from '../../../models/enums';
+import { ButtonNativeType, ButtonType } from '../../../models/types';
 import { Icon } from '../../Icon/Icon';
 import styles from './Button.module.scss';
-import { ButtonType } from '../../../models/types';
-import clsx from 'clsx';
-import { ButtonTypeEnum } from '../../../models/enums';
 
 export interface ButtonProps {
   text: string;
   onClick: (e: unknown) => void;
   type?: ButtonType;
   disabled?: boolean;
-  nativeType?: 'submit' | 'reset' | 'button';
+  nativeType?: ButtonNativeType;
   startIcon?: string;
   endIcon?: string;
   id?: string;
