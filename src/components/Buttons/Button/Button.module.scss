@@ -16,14 +16,12 @@
   font-weight: $weight-semi-bold; // 600
   line-height: 24px;
   margin: 0;
-}
-
-.startIcon {
-  padding-right: 8px;
-}
-
-.endIcon {
-  padding-left: 8px;
+  &.startIcon {
+    padding-left: 8px;
+  }
+  &.endIcon {
+    padding-right: 8px;
+  }
 }
 
 .primary {

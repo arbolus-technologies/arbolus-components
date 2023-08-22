@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react'
-import { Icon, IconProps } from './Icon'
+import { Meta, StoryObj } from '@storybook/react';
+import { Icon, IconProps } from './Icon';
 
 const meta: Meta<IconProps> = {
   title: 'Design System/Icon',
@@ -60,10 +60,10 @@ const meta: Meta<IconProps> = {
       description: 'Icon id.'
     }
   }
-}
+};
 
-export default meta
-type Story = StoryObj<typeof Icon>
+export default meta;
+type Story = StoryObj<typeof Icon>;
 
 export const Component: Story = {
   args: {
@@ -71,4 +71,4 @@ export const Component: Story = {
     fontSize: '20px',
     color: '#000a3f'
   }
-}
+};

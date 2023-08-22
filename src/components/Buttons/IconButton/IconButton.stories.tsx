@@ -1,6 +1,6 @@
-import { jest } from '@storybook/jest'
-import { Meta, StoryObj } from '@storybook/react'
-import { IconButton, IconButtonProps } from './IconButton'
+import { jest } from '@storybook/jest';
+import { Meta, StoryObj } from '@storybook/react';
+import { IconButton, IconButtonProps } from './IconButton';
 
 const meta: Meta<IconButtonProps> = {
   title: 'Design System/Buttons/IconButton',
@@ -52,10 +52,10 @@ const meta: Meta<IconButtonProps> = {
       }
     }
   }
-}
+};
 
-export default meta
-type Story = StoryObj<typeof IconButton>
+export default meta;
+type Story = StoryObj<typeof IconButton>;
 
 export const Test: Story = {
   args: {
@@ -65,4 +65,4 @@ export const Test: Story = {
     nativeType: 'button',
     type: 'primary'
   }
-}
+};

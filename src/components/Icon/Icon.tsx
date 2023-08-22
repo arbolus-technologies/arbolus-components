@@ -1,15 +1,15 @@
-import clsx from 'clsx'
-import React from 'react'
-import styles from './Icon.module.scss'
+import clsx from 'clsx';
+import React from 'react';
+import styles from './Icon.module.scss';
 
 export interface IconProps {
-  name: string
-  fontSize: string
-  color?: string
-  filled?: boolean
-  onClick?: () => void
-  tooltip?: string
-  id?: string
+  name: string;
+  fontSize: string;
+  color?: string;
+  filled?: boolean;
+  onClick?: () => void;
+  tooltip?: string;
+  id?: string;
 }
 export const Icon: React.FC<IconProps> = ({
   name,
@@ -36,4 +36,4 @@ export const Icon: React.FC<IconProps> = ({
   >
     {name}
   </span>
-)
+);
