@@ -46,7 +46,7 @@
     "reactstrap": "^9.1.6",
     "sass": "^1.66.1",
     "vite-plugin-css-injected-by-js": "^3.3.0",
-    "vite-plugin-dts": "^3.3.1"
+    "vite-plugin-dts": "^3.5.2"
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",
