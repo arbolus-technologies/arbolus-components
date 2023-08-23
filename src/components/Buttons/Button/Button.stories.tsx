@@ -77,7 +77,8 @@ const meta: Meta<ButtonProps> = {
       table: {
         defaultValue: { summary: 'undefined' }
       },
-      description: 'Button id.'
+      description:
+        'Button id. It is assigned automatically as the component id and the data-testid.'
     }
   }
 };

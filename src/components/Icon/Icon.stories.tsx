@@ -66,7 +66,7 @@ const meta: Meta<IconProps> = {
       table: {
         defaultValue: { summary: 'undefined' }
       },
-      description: 'Icon id.'
+      description: 'Icon id. It is assigned automatically as the component id and the data-testid.'
     }
   }
 };

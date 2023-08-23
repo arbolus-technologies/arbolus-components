@@ -33,6 +33,7 @@ export const Button: React.FC<ButtonProps> = ({
       type={nativeType}
       className={styles[type]}
       id={id}
+      data-testid={id}
     >
       {startIcon && <Icon name={startIcon} fontSize='20px' />}
       <p

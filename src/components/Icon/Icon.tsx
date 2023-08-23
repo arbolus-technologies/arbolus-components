@@ -21,7 +21,6 @@ export const Icon: React.FC<IconProps> = ({
   id
 }) => (
   <span
-    id={id}
     onClick={onClick}
     style={{
       fontSize,
@@ -33,6 +32,8 @@ export const Icon: React.FC<IconProps> = ({
       [styles.filled]: filled
     })}
     title={tooltip}
+    id={id}
+    data-testid={id}
   >
     {name}
   </span>
