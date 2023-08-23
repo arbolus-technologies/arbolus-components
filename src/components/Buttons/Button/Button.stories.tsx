@@ -29,6 +29,9 @@ const meta: Meta<ButtonProps> = {
     onClick: {
       name: 'onClick',
       action: 'clicked',
+      table: {
+        defaultValue: { summary: 'undefined' }
+      },
       description: 'Method called on button click.'
     },
     disabled: {
@@ -53,19 +56,29 @@ const meta: Meta<ButtonProps> = {
       name: 'startIcon',
       control: 'text',
       type: 'string',
+      table: {
+        defaultValue: { summary: 'undefined' }
+      },
       description: 'Icon name that is positioned at the beginning of the button text.'
     },
     endIcon: {
       name: 'endIcon',
       control: 'text',
       type: 'string',
+      table: {
+        defaultValue: { summary: 'undefined' }
+      },
       description: 'Icon name that is positioned at the end of the button text.'
     },
     id: {
       name: 'id',
       control: 'text',
       type: 'string',
-      description: 'Button id.'
+      table: {
+        defaultValue: { summary: 'undefined' }
+      },
+      description:
+        'Button id. It is assigned automatically as the component id and the data-testid.'
     }
   }
 };

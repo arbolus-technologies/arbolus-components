@@ -1,55 +1,59 @@
-import { jest } from '@storybook/jest';
 import { Meta, StoryObj } from '@storybook/react';
+import { userEvent, within } from '@storybook/testing-library';
 import { IconButton, IconButtonProps } from './IconButton';
 
 const meta: Meta<IconButtonProps> = {
   title: 'Design System/Buttons/IconButton',
   component: IconButton,
+  parameters: {
+    docs: {
+      description: {
+        component: 'This component is a button with a centered icon.'
+      }
+    }
+  },
   argTypes: {
-    type: {
-      options: ['primary', 'secondary', 'tertiary', 'confirmation', 'rejection'],
-      control: { type: 'select' },
-      defaultValue: 'primary',
-      table: {
-        type: { summary: 'select' }
-      }
-    },
-    text: {
+    icon: {
+      name: 'icon*',
       control: 'text',
-      table: {
-        type: { summary: 'string' }
-      }
+      type: 'string',
+      description: '`required` - Icon name that is positioned inside of the button.'
     },
     onClick: {
+      name: 'onClick',
       action: 'clicked',
       table: {
-        defaultValue: { summary: '() => console.log("click")' },
-        type: { summary: 'function' }
-      }
+        defaultValue: { summary: 'undefined' }
+      },
+      description: 'Method called on button click.'
     },
     disabled: {
+      name: 'disabled',
       control: 'boolean',
-      defaultValue: false,
+      type: 'boolean',
       table: {
-        type: { summary: 'boolean' }
-      }
+        defaultValue: { summary: false }
+      },
+      description: 'Boolean by default false that disables the button.'
     },
     nativeType: {
+      name: 'nativeType',
       options: ['submit', 'reset', 'button'],
       control: { type: 'select' },
-      defaultValue: 'button'
-    },
-    startIcon: {
-      control: 'text',
       table: {
-        type: { summary: 'string' }
-      }
+        defaultValue: { summary: 'button' }
+      },
+      description: 'Button native type. By default is `button`.'
     },
-    endIcon: {
+    id: {
+      name: 'id',
       control: 'text',
+      type: 'string',
       table: {
-        type: { summary: 'string' }
-      }
+        defaultValue: { summary: 'undefined' }
+      },
+      description:
+        'IconButton id. It is assigned automatically as the component id and the data-testid.'
     }
   }
 };
@@ -57,12 +61,15 @@ const meta: Meta<IconButtonProps> = {
 export default meta;
 type Story = StoryObj<typeof IconButton>;
 
-export const Test: Story = {
+export const Component: Story = {
   args: {
-    text: 'Primary button',
-    onClick: jest.fn(),
+    icon: 'people',
     disabled: false,
-    nativeType: 'button',
-    type: 'primary'
+    nativeType: 'button'
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
   }
 };
