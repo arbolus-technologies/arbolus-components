@@ -1,35 +1,34 @@
 import React from 'react';
+import { ButtonNativeType } from '../../../models/types';
+import { Icon } from '../../Icon/Icon';
 import styles from './IconButton.module.scss';
-import clsx from 'clsx';
 
 export interface IconButtonProps {
-  text: string;
-  onClick: (e: unknown) => void;
-  disabled: boolean;
-  type: any;
-  nativeType: 'submit' | 'reset' | 'button';
-  startIcon?: string;
-  endIcon?: string;
+  icon: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onClick?: (e: any) => void;
+  disabled?: boolean;
+  nativeType?: ButtonNativeType;
+  id?: string;
 }
 
 export const IconButton: React.FC<IconButtonProps> = ({
-  text,
+  icon,
   onClick,
   disabled = false,
-  type,
   nativeType = 'button',
-  startIcon,
-  endIcon
-}) => (
-  <button onClick={onClick} disabled={disabled} type={nativeType} className={styles[type]}>
-    {startIcon && (
-      <span className={clsx('material-symbols-sharp', styles.icon, styles.startIcon)}>
-        {startIcon}
-      </span>
-    )}
-    <p className={styles.text}>{text}</p>
-    {endIcon && (
-      <span className={clsx('material-symbols-sharp', styles.icon, styles.endIcon)}>{endIcon}</span>
-    )}
-  </button>
-);
+  id
+}) => {
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      type={nativeType}
+      className={styles.iconButton}
+      id={id}
+      data-testid={id}
+    >
+      <Icon name={icon} fontSize='24px' />
+    </button>
+  );
+};
