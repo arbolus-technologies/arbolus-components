@@ -27,9 +27,9 @@ const meta: Meta<ButtonProps> = {
       description: '`required` - Different type of buttons allowed.'
     },
     onClick: {
-      name: 'onClick*',
+      name: 'onClick',
       action: 'clicked',
-      description: '`required` - Method called on button click.'
+      description: 'Method called on button click.'
     },
     disabled: {
       name: 'disabled',
