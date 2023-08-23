@@ -29,7 +29,7 @@ const meta: Meta<IconProps> = {
       name: 'color',
       control: { type: 'color' },
       table: {
-        defaultValue: { summary: '#000a3f' }
+        defaultValue: { summary: 'inherit' }
       },
       description: 'Color of the icon.'
     },
@@ -44,6 +44,9 @@ const meta: Meta<IconProps> = {
     onClick: {
       name: 'onClick',
       action: 'clicked',
+      table: {
+        defaultValue: { summary: 'undefined' }
+      },
       description:
         'Method called on icon click. When possible, an IconButton or a Button component should be used instead if an onClick action is needed.'
     },
@@ -51,12 +54,18 @@ const meta: Meta<IconProps> = {
       name: 'tooltip',
       control: 'text',
       type: 'string',
+      table: {
+        defaultValue: { summary: 'undefined' }
+      },
       description: 'Specify the tooltip of the icon on mouse hover.'
     },
     id: {
       name: 'id',
       control: 'text',
       type: 'string',
+      table: {
+        defaultValue: { summary: 'undefined' }
+      },
       description: 'Icon id.'
     }
   }
