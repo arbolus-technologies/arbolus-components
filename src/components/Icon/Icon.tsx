@@ -14,7 +14,7 @@ export interface IconProps {
 export const Icon: React.FC<IconProps> = ({
   name,
   fontSize,
-  color = '#000a3f',
+  color,
   filled = false,
   onClick,
   tooltip,

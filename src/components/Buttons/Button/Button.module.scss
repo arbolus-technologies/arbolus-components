@@ -61,7 +61,7 @@
 
 .tertiary {
   @extend .baseButton;
-  background-color: $bColorBaseWhite;
+  background-color: transparent;
   color: $bColorBasePurple;
   padding: 0;
 
