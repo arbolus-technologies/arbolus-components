@@ -9,9 +9,6 @@
   &:focus {
     outline: none !important;
   }
-  & > span {
-    cursor: pointer !important;
-  }
 }
 
 .text {
@@ -32,11 +29,9 @@
   @extend .baseButton;
   background-color: $bColorBasePurple;
   color: $bColorBaseWhite;
-
   &:hover {
     background-color: $bColorAccentPurpleDark;
   }
-
   &:disabled {
     background-color: $bColorPrimaryPurpleDisabled;
   }
@@ -47,12 +42,10 @@
   border: 1px solid $bColorBasePurple;
   background-color: $bColorBaseWhite;
   color: $bColorBasePurple;
-
   &:hover {
     color: $bColorAccentPurpleDark;
     border: 1px solid $bColorAccentPurpleDark;
   }
-
   &:disabled {
     color: $bColorPrimaryPurpleDisabled;
     border: 1px solid $bColorPrimaryPurpleDisabled;
@@ -64,11 +57,9 @@
   background-color: transparent;
   color: $bColorBasePurple;
   padding: 0;
-
   &:hover {
     color: $bColorAccentPurpleDark;
   }
-
   &:disabled {
     color: $bColorPrimaryPurpleDisabled;
   }
@@ -78,11 +69,9 @@
   @extend .baseButton;
   background-color: $bColorSecondaryGreen;
   color: $bColorBaseWhite;
-
   &:hover {
     background-color: $bColorSuccess;
   }
-
   &:disabled {
     background-color: $bColorSuccessDisabled;
   }
@@ -92,11 +81,9 @@
   @extend .baseButton;
   background-color: $bColorBaseOrange;
   color: $bColorBaseWhite;
-
   &:hover {
     background-color: $bDangerHover;
   }
-
   &:disabled {
     background-color: $bDangerDisabled;
   }

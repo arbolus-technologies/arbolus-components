@@ -35,13 +35,13 @@ export const Button: React.FC<ButtonProps> = ({
       id={id}
       data-testid={id}
     >
-      {startIcon && <Icon name={startIcon} fontSize='20px' />}
+      {startIcon && <Icon name={startIcon} fontSize='20px' disabled={disabled} cursor={true} />}
       <p
         className={clsx(styles.text, { [styles.startIcon]: startIcon, [styles.endIcon]: endIcon })}
       >
         {text}
       </p>
-      {endIcon && <Icon name={endIcon} fontSize='20px' />}
+      {endIcon && <Icon name={endIcon} fontSize='20px' disabled={disabled} cursor={true} />}
     </button>
   );
 };

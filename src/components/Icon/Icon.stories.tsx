@@ -41,6 +41,15 @@ const meta: Meta<IconProps> = {
       },
       description: 'Specify if the icon should be filled or not.'
     },
+    cursor: {
+      name: 'cursor',
+      control: 'boolean',
+      table: {
+        defaultValue: { summary: false }
+      },
+      description:
+        'Set if the cursor should be displayed as pointer if there is no onClick method defined.'
+    },
     onClick: {
       name: 'onClick',
       action: 'clicked',
@@ -48,7 +57,16 @@ const meta: Meta<IconProps> = {
         defaultValue: { summary: 'undefined' }
       },
       description:
-        'Method called on icon click. When possible, an IconButton or a Button component should be used instead if an onClick action is needed.'
+        'Method called on icon click. When possible, an IconButton or a Button component should be used instead if an onClick action is needed. It automatically sets the cursor as pointer if defined.'
+    },
+    disabled: {
+      name: 'disabled',
+      control: 'boolean',
+      type: 'boolean',
+      table: {
+        defaultValue: { summary: false }
+      },
+      description: 'Boolean that resets the cursor to default and prevents user interaction.'
     },
     tooltip: {
       name: 'tooltip',

@@ -7,7 +7,10 @@ export interface IconProps {
   fontSize: string;
   color?: string;
   filled?: boolean;
-  onClick?: () => void;
+  cursor?: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onClick?: (e: any) => void;
+  disabled?: boolean;
   tooltip?: string;
   id?: string;
 }
@@ -16,7 +19,9 @@ export const Icon: React.FC<IconProps> = ({
   fontSize,
   color,
   filled = false,
+  cursor = false,
   onClick,
+  disabled = false,
   tooltip,
   id
 }) => (
@@ -24,12 +29,12 @@ export const Icon: React.FC<IconProps> = ({
     onClick={onClick}
     style={{
       fontSize,
-      color,
-      cursor: onClick ? 'pointer' : 'default',
-      userSelect: 'none'
+      color
     }}
-    className={clsx('material-symbols-sharp icon', {
-      [styles.filled]: filled
+    className={clsx('material-symbols-sharp icon', styles.icon, {
+      [styles.cursor]: !!onClick || cursor,
+      [styles.filled]: filled,
+      [styles.disabled]: disabled
     })}
     title={tooltip}
     id={id}
