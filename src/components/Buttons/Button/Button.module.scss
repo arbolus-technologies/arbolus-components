@@ -1,10 +1,12 @@
 .baseButton {
   all: unset; // Reset default button style
-  padding: 8px 16px;
+  padding: 0 16px;
   border-radius: 8px;
   display: flex;
   align-items: center;
   width: fit-content;
+  height: 40px;
+  min-height: 40px;
   min-width: fit-content;
   &:focus {
     outline: none !important;
