@@ -8,7 +8,6 @@
   border: 1px solid $bColorBasePurple;
   background-color: $bColorBaseWhite;
   color: $bColorBasePurple;
-
   &:hover {
     color: $bColorAccentPurpleDark;
     border: 1px solid $bColorAccentPurpleDark;
@@ -19,8 +18,5 @@
   }
   &:focus {
     outline: none !important;
-  }
-  & > span {
-    cursor: pointer !important;
   }
 }

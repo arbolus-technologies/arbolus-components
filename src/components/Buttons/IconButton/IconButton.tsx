@@ -28,7 +28,7 @@ export const IconButton: React.FC<IconButtonProps> = ({
       id={id}
       data-testid={id}
     >
-      <Icon name={icon} fontSize='24px' />
+      <Icon name={icon} fontSize='24px' disabled={disabled} cursor={true} />
     </button>
   );
 };
