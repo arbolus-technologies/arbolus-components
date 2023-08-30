@@ -2,9 +2,7 @@
 
 import type { StorybookConfig } from '@storybook/react-vite';
 
-import path from 'path';
 import { mergeConfig } from 'vite';
-
 
 const config: StorybookConfig = {
   framework: '@storybook/react-vite',
