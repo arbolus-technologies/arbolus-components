@@ -45,6 +45,9 @@
   border: 1px solid $bColorBasePurple;
   background-color: $bColorBaseWhite;
   color: $bColorBasePurple;
+  // To compensate the 2 extra height pixels from the border
+  height: 38px;
+  min-height: 38px;
   &:hover {
     color: $bColorAccentPurpleDark;
     border: 1px solid $bColorAccentPurpleDark;
@@ -60,6 +63,8 @@
   background-color: transparent;
   color: $bColorBasePurple;
   padding: 0;
+  min-height: auto;
+  height: auto;
   &:hover {
     color: $bColorAccentPurpleDark;
   }
