@@ -1,5 +1,4 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { userEvent, within } from '@storybook/testing-library';
 import { FeedbackCollector, FeedbackCollectorProps } from './FeedbackCollector';
 
 const meta: Meta<FeedbackCollectorProps> = {
@@ -8,7 +7,7 @@ const meta: Meta<FeedbackCollectorProps> = {
   parameters: {
     docs: {
       description: {
-        component: 'This component is a button with a centered icon.'
+        component: 'Feedback collector with cookie'
       }
     }
   },
@@ -47,7 +46,7 @@ const meta: Meta<FeedbackCollectorProps> = {
       description: 'position of the feedbackCollector'
     },
     cookie: {
-      name: 'cookie',
+      name: 'cookie (change this to see the component)',
       control: 'text',
       type: 'string',
       table: {

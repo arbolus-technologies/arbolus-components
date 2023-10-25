@@ -33,6 +33,7 @@ const config: StorybookConfig = {
             additionalData: `
                     @import '../src/theme/sass/_variables.scss';
                     @import '../src/theme/sass/_typography.scss';
+                    @import "./src/theme/sass/_mixins.scss";
                   `
           }
         }
