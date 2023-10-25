@@ -61,7 +61,7 @@ const meta: Meta<FeedbackCollectorProps> = {
       table: {
         defaultValue: { summary: 'undefined' }
       },
-      description: 'cookie (change this to see the component)'
+      description: 'title in the feedbackCollector'
     },
     subtitle: {
       name: 'subtitle',
@@ -70,7 +70,7 @@ const meta: Meta<FeedbackCollectorProps> = {
       table: {
         defaultValue: { summary: 'undefined' }
       },
-      description: 'cookie (change this to see the component)'
+      description: 'subtitle in the feedbackCollector'
     }
   }
 };
