@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
 import { ButtonNativeType, ButtonType } from '../../../models/types';
-import { Icon } from '../../Icon/Icon';
 import styles from './Button.module.scss';
+import { Icon } from '../../Icon/Icon';
 
 export interface ButtonProps {
   text: string;

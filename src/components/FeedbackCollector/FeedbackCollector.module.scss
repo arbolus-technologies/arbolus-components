@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  background-color: $bColorBaseWhite;
+  border: 1px solid $bColorSecondaryGreyMid;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.feedbackCollectorContainer {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  bottom: 5px;
+  right: 5px;
+  width: 350px;
+  background-color: $bColorBaseWhite;
+  border: 1px solid $bColorSecondaryGreyMid;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.feedbackTitle {
+  font-weight: $weight-semi-bold;
+  text-align: center;
+  font-size: $size-large;
+  margin-bottom: 8px;
+}
+
+.feedbackSubTitle {
+  text-align: center;
+  font-size: $size-small;
+}
+
+.iconContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contentContainer {
+  padding: 0px 16px 16px 16px;
+}
+
+.starContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: space-between;
+  font-size: $size-small;
+}
+
+.buttonContainer {
+  display: flex;
+  place-content: center;
+}
+
+.titleSubtitleContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}

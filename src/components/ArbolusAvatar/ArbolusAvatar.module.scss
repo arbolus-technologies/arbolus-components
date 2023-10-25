@@ -1,0 +1,50 @@
+.profileImage {
+  min-width: 48px;
+  min-height: 48px;
+  max-width: 48px;
+  max-height: 48px;
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  gap: 16px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+}
+
+.name {
+  font-size: $size-large;
+  font-weight: $weight-semi-bold;
+  line-height: $size-xx-large;
+  display: flex;
+  @include text-ellipsis();
+  gap: 8px;
+}
+
+.title {
+  font-size: $size-large;
+  font-weight: $weight-light;
+  color: $bColorSecondaryGreyDark;
+  @include text-ellipsis();
+  line-height: $size-xx-large;
+}
+
+.roundedLetters {
+  min-width: 48px;
+  min-height: 48px;
+  max-width: 48px;
+  max-height: 48px;
+  border-radius: 50%;
+  border: 1px solid $bColorSecondaryGreyMid;
+  color: $bColorSecondaryGreyDark;
+  background: $bColorBaseWhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,93 @@
+.inputController {
+  border-radius: 4px;
+
+  min-height: 48px;
+
+  border: solid 1px $bColorSecondaryGreyMid;
+
+  background-color: $bColorBaseWhite;
+  color: $bColorBaseDark1;
+
+  font-size: $size-regular;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  outline: none !important;
+
+  &.is-invalid {
+    border: 1px solid $bColorBaseOrange;
+  }
+
+  &::placeholder {
+    color: $bColorBaseDark1;
+    opacity: 0.25;
+  }
+
+  &:-ms-input-placeholder {
+    color: $bColorSecondaryGreyMid;
+    opacity: 1;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  &[type='number']::-webkit-outer-spin-button,
+  &[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  &:focus,
+  &:active,
+  &:hover,
+  &.active {
+    box-shadow: none;
+  }
+}
+
+.inputContainer {
+  margin-bottom: 10px;
+
+  input {
+    &:disabled {
+      background: none;
+    }
+    &:disabled:hover {
+      border: solid 1px $bColorSecondaryGreyMid;
+    }
+  }
+
+  .error {
+    min-height: 16px;
+    color: $bColorBaseOrange;
+    text-align: right;
+    font-size: $size-small;
+    margin-top: 4px;
+    line-height: 1.3em;
+  }
+
+  .isError {
+    border: 1px solid $bColorBaseOrange;
+  }
+}
+
+.medium {
+  height: 60px !important;
+}
+
+.big {
+  height: 100px !important;
+}
+
+.disabled {
+  background-color: #e9ecef !important;
+}
+
+textarea {
+  resize: none;
+}
