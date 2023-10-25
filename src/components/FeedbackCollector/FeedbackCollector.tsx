@@ -17,6 +17,8 @@ export interface FeedbackCollectorProps {
   handleOnClickedStar: (star: number) => void;
   direction: 'bottom-right' | 'centered';
   cookie: string;
+  title: string;
+  subtitle: string;
 }
 
 export interface IFeedbackCollector {
@@ -29,7 +31,9 @@ export const FeedbackCollector: React.FC<FeedbackCollectorProps> = ({
   onSubmit,
   handleOnClickedStar,
   direction,
-  cookie
+  cookie,
+  title,
+  subtitle
 }) => {
   const { t } = useTranslation(`feedbackCollector`);
 
@@ -74,11 +78,8 @@ export const FeedbackCollector: React.FC<FeedbackCollectorProps> = ({
       </div>
       <div className={styles.contentContainer}>
         <div className={styles.titleSubtitleContainer}>
-          <span className={styles.feedbackTitle}>How is your experience with Canopy?</span>
-          <span className={styles.feedbackSubTitle}>
-            Tell us about your canopy experience, this will help us to improve the quality of our
-            services
-          </span>
+          <span className={styles.feedbackTitle}>{title}</span>
+          <span className={styles.feedbackSubTitle}>{subtitle}</span>
         </div>
         <div className={styles.starContainer}>
           <Controller
@@ -104,12 +105,12 @@ export const FeedbackCollector: React.FC<FeedbackCollectorProps> = ({
             control={control}
             name='comment'
             errors={errors}
-            placeholder='Start typing...'
+            placeholder={t('startTyping')}
             type='textarea'
             size='big'
           />
           <div className={styles.buttonContainer}>
-            <Button onClick={handleSubmit(onSubmit)} text='Submit' />
+            <Button onClick={handleSubmit(onSubmit)} text={t('submit')} />
           </div>
         </div>
       )}

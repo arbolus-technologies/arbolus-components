@@ -8,49 +8,49 @@ const meta: Meta<ArbolusAvatarProps> = {
   parameters: {
     docs: {
       description: {
-        component: 'This component is a button with a centered icon.'
+        component: 'Avatar component'
       }
     }
   },
   argTypes: {
     profileImage: {
-      name: 'profileImage url',
+      name: 'profileImage',
       control: 'text',
       type: 'string',
       table: {
         defaultValue: { summary: 'undefined' }
       },
-      description: 'Profile image'
+      description: 'Profile image url'
     },
     name: {
-      name: 'user name',
+      name: 'name',
       control: 'text',
       type: 'string',
       table: {
         defaultValue: { summary: 'undefined' }
       },
-      description: 'Profile image'
+      description: 'User name'
     },
     lastName: {
-      name: 'user lastName',
+      name: 'lastName',
       control: 'text',
       type: 'string',
       table: {
         defaultValue: { summary: 'undefined' }
       },
-      description: 'Profile image'
+      description: 'User lastName'
     },
     children: {
-      name: 'children after name',
+      name: 'children',
       control: 'children',
-      options: ['Normal', 'Bold', 'Italic'],
       mapping: {
         Bold: <b>Bold</b>,
         Italic: <i>Italic</i>
-      }
+      },
+      description: 'Children'
     },
     title: {
-      name: 'user Title',
+      name: 'title',
       control: 'text',
       type: 'string',
       table: {

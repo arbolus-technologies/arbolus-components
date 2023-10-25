@@ -18,7 +18,7 @@ const meta: Meta<FeedbackCollectorProps> = {
       table: {
         defaultValue: { summary: 'undefined' }
       },
-      description: 'function to close the feedbackCollector'
+      description: 'Function to close the feedbackCollector'
     },
     onSubmit: {
       name: 'onSubmit',
@@ -43,16 +43,34 @@ const meta: Meta<FeedbackCollectorProps> = {
       table: {
         defaultValue: { summary: 'undefined' }
       },
-      description: 'position of the feedbackCollector'
+      description: 'Position of the feedbackCollector'
     },
     cookie: {
-      name: 'cookie (change this to see the component)',
+      name: 'cookie',
       control: 'text',
       type: 'string',
       table: {
         defaultValue: { summary: 'undefined' }
       },
-      description: 'Cookie name'
+      description: 'cookie (change this to see the component)'
+    },
+    title: {
+      name: 'title',
+      control: 'text',
+      type: 'string',
+      table: {
+        defaultValue: { summary: 'undefined' }
+      },
+      description: 'cookie (change this to see the component)'
+    },
+    subtitle: {
+      name: 'subtitle',
+      control: 'text',
+      type: 'string',
+      table: {
+        defaultValue: { summary: 'undefined' }
+      },
+      description: 'cookie (change this to see the component)'
     }
   }
 };
@@ -63,6 +81,9 @@ type Story = StoryObj<typeof FeedbackCollector>;
 export const Component: Story = {
   args: {
     cookie: 'cookieName',
-    direction: 'bottom-right'
+    direction: 'bottom-right',
+    title: 'How is your experience with Canopy?',
+    subtitle:
+      'Tell us about your canopy experience, this will help us to improve the quality of our services'
   }
 };
