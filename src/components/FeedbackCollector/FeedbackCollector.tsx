@@ -94,8 +94,8 @@ export const FeedbackCollector: React.FC<FeedbackCollectorProps> = ({
           />
         </div>
         <div className={styles.infoContainer}>
-          <span>Very bad</span>
-          <span>Very good</span>
+          <span>{t('veryGood')}</span>
+          <span>{t('veryBad')}</span>
         </div>
       </div>
       {isStarSelected && (
