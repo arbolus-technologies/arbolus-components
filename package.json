@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
+    "@types/yup": "^0.26.26",
     "bootstrap": "^4.4.1",
     "clsx": "^2.0.0",
     "i18next": "^23.6.0",

@@ -5136,6 +5136,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/yup@npm:^0.26.26":
+  version: 0.26.37
+  resolution: "@types/yup@npm:0.26.37"
+  checksum: e505f1ae19a621fd31a66899fc7f5368295cc5ee04174a3488dd8455d32bb8efdc54cde8a625885b739b9f9b1532b348011e3ba89a3186dbe4acf40718a6deb5
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/eslint-plugin@npm:^5.59.5":
   version: 5.59.5
   resolution: "@typescript-eslint/eslint-plugin@npm:5.59.5"
@@ -5665,6 +5672,7 @@ __metadata:
     "@storybook/theming": ^7.4.0
     "@types/react": ^18.2.15
     "@types/react-dom": ^18.2.7
+    "@types/yup": ^0.26.26
     "@typescript-eslint/eslint-plugin": ^5.59.5
     "@typescript-eslint/parser": ^5.59.5
     "@vitejs/plugin-react": ^4.0.4
