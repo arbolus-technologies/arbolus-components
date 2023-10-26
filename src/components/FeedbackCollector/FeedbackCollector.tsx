@@ -22,7 +22,7 @@ export interface FeedbackCollectorProps {
 }
 
 export interface IFeedbackCollector {
-  comment?: string;
+  comment?: string | null;
   stars: number;
 }
 
@@ -44,10 +44,10 @@ export const FeedbackCollector: React.FC<FeedbackCollectorProps> = ({
     control,
     handleSubmit,
     formState: { errors }
-  } = useForm<IFeedbackCollector>({
+  } = useForm<any>({
     resolver: yupResolver(FeedbackCollectorSchema),
     defaultValues: {
-      comment: '',
+      comment: '' || undefined,
       stars: 0
     }
   });
