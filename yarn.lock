@@ -2195,12 +2195,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hookform/resolvers@npm:^3.3.2":
-  version: 3.3.2
-  resolution: "@hookform/resolvers@npm:3.3.2"
+"@hookform/resolvers@npm:^2.8.1":
+  version: 2.9.11
+  resolution: "@hookform/resolvers@npm:2.9.11"
   peerDependencies:
     react-hook-form: ^7.0.0
-  checksum: bcaefe2a8a212b015b3ea99c93d7ecb5c8f475606d83be9d82dc6cc0cbb3cda03f7fd7a4426688c2de29b6800b93adbf9abb932a1dafee1d053dcaa69ec13f3f
+  checksum: 977ea038bb94457ac9f6c7ca65438ce8fcd0cf7643b9925d8bc4d66df6faa0f49ad642bee7362f86a4d3ff7ff53d18b7aea0597085993971cae00e86bf6eda73
   languageName: node
   linkType: hard
 
@@ -5287,30 +5287,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volar/language-core@npm:1.10.5, @volar/language-core@npm:~1.10.5":
-  version: 1.10.5
-  resolution: "@volar/language-core@npm:1.10.5"
+"@volar/language-core@npm:1.10.6, @volar/language-core@npm:~1.10.5":
+  version: 1.10.6
+  resolution: "@volar/language-core@npm:1.10.6"
   dependencies:
-    "@volar/source-map": 1.10.5
-  checksum: 73600e0380978668db5b4df393c07575b137947a346eb45ff68a220b801008edf7dfcd969235c37b5c1d419af939b586de23f11f6f8bc4bafd73a31d3a0d5ff4
+    "@volar/source-map": 1.10.6
+  checksum: f8ad420f627c8c656855ceb89c33cd07009bd80529c4c7e427faa14795300a8ea18cce33178f87ea1db22ae147cfb5384859a00893710af04894037dcbaaeaf2
   languageName: node
   linkType: hard
 
-"@volar/source-map@npm:1.10.5, @volar/source-map@npm:~1.10.5":
-  version: 1.10.5
-  resolution: "@volar/source-map@npm:1.10.5"
+"@volar/source-map@npm:1.10.6, @volar/source-map@npm:~1.10.5":
+  version: 1.10.6
+  resolution: "@volar/source-map@npm:1.10.6"
   dependencies:
     muggle-string: ^0.3.1
-  checksum: e70136012a51d9bc015e9272acaaf20d7450ad53a52960032ef40f4df9d64a80e184d9a936089324d8b5d7c15d7829b9d2733e2d8fb7bb80c91b645b7bb8abc9
+  checksum: 03a1e3ff4dc031c83646cecd976b33b2ba956d73e6ee1b2668f549abbbfd1e93e080e29eac722bfaba79072c678cf14e9d2b6afcc70769981c9cc6fc4713ec2e
   languageName: node
   linkType: hard
 
 "@volar/typescript@npm:~1.10.5":
-  version: 1.10.5
-  resolution: "@volar/typescript@npm:1.10.5"
+  version: 1.10.6
+  resolution: "@volar/typescript@npm:1.10.6"
   dependencies:
-    "@volar/language-core": 1.10.5
-  checksum: 9e75738c2a576cbf3b68079c61820759712e82fefefaebafd21d3235be35c953f8028419056bcd62e7badcea8da9d9da8d043dcaa855df16d16ab11f5b49e690
+    "@volar/language-core": 1.10.6
+  checksum: 01f499c150208629778d2ad574207589bf1184c934f8839733e2ffe2b128b8287c4350543040ff6e9a41eae171a4928880edffcc2f9fa281b6a8b20a3b7e3029
   languageName: node
   linkType: hard
 
@@ -5648,7 +5648,7 @@ __metadata:
   resolution: "arbolus-ui-components@workspace:."
   dependencies:
     "@babel/core": ^7.21.8
-    "@hookform/resolvers": ^3.3.2
+    "@hookform/resolvers": ^2.8.1
     "@storybook/addon-actions": ^7.4.0
     "@storybook/addon-coverage": ^0.0.9
     "@storybook/addon-essentials": ^7.4.0

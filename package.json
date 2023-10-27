@@ -29,7 +29,7 @@
     "spellcheck": "cspell \"src/**/{*.ts}\" --config cspell.json"
   },
   "dependencies": {
-    "@hookform/resolvers": "^3.3.2",
+    "@hookform/resolvers": "^2.8.1",
     "@types/yup": "^0.26.26",
     "bootstrap": "^4.4.1",
     "clsx": "^2.0.0",
