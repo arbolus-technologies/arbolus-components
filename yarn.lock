@@ -5684,7 +5684,7 @@ __metadata:
     i18next: ^20.6.1
     i18next-browser-languagedetector: ^7.1.0
     i18next-http-backend: ^2.2.2
-    material-symbols: ^0.10.0
+    material-symbols: ^0.14.1
     path: ^0.12.7
     prettier: ^2.8.4
     react: ^18.2.0
@@ -10904,10 +10904,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"material-symbols@npm:^0.10.0":
-  version: 0.10.4
-  resolution: "material-symbols@npm:0.10.4"
-  checksum: f5df04438fc021914fe236fb096028ba30405187787879f55920c2c1f4c2e07b8a1cc3995f31e7bac1c13b89eeb23b34faaa29d61f1f39947f06b2a5fe06cb21
+"material-symbols@npm:^0.14.1":
+  version: 0.14.1
+  resolution: "material-symbols@npm:0.14.1"
+  checksum: 5093e4077c20ee95994016f196eac73b145798153a9d7b7845cab75bfbc023b0f9be7a72992f6dec6e84c5a446aa63e24c5b7649368d58d15399c2a4f3294090
   languageName: node
   linkType: hard
 
