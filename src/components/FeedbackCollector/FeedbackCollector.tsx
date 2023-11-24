@@ -112,7 +112,7 @@ export const FeedbackCollector: React.FC<FeedbackCollectorProps> = ({
         </div>
       </div>
       {isStarSelected && (
-        <div className={clsx(styles.feedbackTextContainer)}>
+        <div className={styles.feedbackTextContainer}>
           <InputController
             control={control}
             name={FEEDBACK_COLLECTOR}
