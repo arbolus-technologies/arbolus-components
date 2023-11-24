@@ -3,27 +3,20 @@
   padding: 0 16px;
   border-radius: 8px;
   display: flex;
+  flex-direction: row;
+  column-gap: 8px;
   align-items: center;
   width: fit-content;
+  min-width: fit-content;
   height: 40px;
   min-height: 40px;
-  min-width: fit-content;
-  &:focus {
-    outline: none !important;
-  }
-}
 
-.text {
-  font-size: $size-regular; // 14px
-  font-weight: $weight-semi-bold; // 600
+  font-size: $size-regular;
+  font-weight: $weight-semi-bold;
   line-height: 24px;
   user-select: none;
-  margin: 0;
-  &.startIcon {
-    padding-left: 8px;
-  }
-  &.endIcon {
-    padding-right: 8px;
+  &:focus {
+    outline: none !important;
   }
 }
 
