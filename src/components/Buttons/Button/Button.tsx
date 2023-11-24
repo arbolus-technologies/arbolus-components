@@ -1,8 +1,8 @@
-import clsx from 'clsx';
 import React from 'react';
+import { ButtonTypeEnum } from '../../../models/enums';
 import { ButtonNativeType, ButtonType } from '../../../models/types';
-import styles from './Button.module.scss';
 import { Icon } from '../../Icon/Icon';
+import styles from './Button.module.scss';
 
 export interface ButtonProps {
   text: string;
@@ -18,7 +18,7 @@ export interface ButtonProps {
 
 export const Button: React.FC<ButtonProps> = ({
   text,
-  type = 'primary',
+  type = ButtonTypeEnum.PRIMARY,
   onClick,
   disabled = false,
   nativeType = 'button',
@@ -36,11 +36,7 @@ export const Button: React.FC<ButtonProps> = ({
       data-testid={id}
     >
       {startIcon && <Icon name={startIcon} fontSize='20px' disabled={disabled} cursor={true} />}
-      <p
-        className={clsx(styles.text, { [styles.startIcon]: startIcon, [styles.endIcon]: endIcon })}
-      >
-        {text}
-      </p>
+      {text}
       {endIcon && <Icon name={endIcon} fontSize='20px' disabled={disabled} cursor={true} />}
     </button>
   );

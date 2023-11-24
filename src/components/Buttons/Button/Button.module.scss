@@ -3,27 +3,20 @@
   padding: 0 16px;
   border-radius: 8px;
   display: flex;
+  flex-direction: row;
+  column-gap: 8px;
   align-items: center;
   width: fit-content;
+  min-width: fit-content;
   height: 40px;
   min-height: 40px;
-  min-width: fit-content;
-  &:focus {
-    outline: none !important;
-  }
-}
 
-.text {
-  font-size: $size-regular; // 14px
-  font-weight: $weight-semi-bold; // 600
+  font-size: $size-regular;
+  font-weight: $weight-semi-bold;
   line-height: 24px;
   user-select: none;
-  margin: 0;
-  &.startIcon {
-    padding-left: 8px;
-  }
-  &.endIcon {
-    padding-right: 8px;
+  &:focus {
+    outline: none !important;
   }
 }
 
@@ -33,6 +26,7 @@
   color: $bColorBaseWhite;
   &:hover {
     background-color: $bColorAccentPurpleDark;
+    transition: background-color 300ms ease-out;
   }
   &:disabled {
     background-color: $bColorPrimaryPurpleDisabled;
@@ -50,6 +44,8 @@
   &:hover {
     color: $bColorAccentPurpleDark;
     border: 1px solid $bColorAccentPurpleDark;
+    transition: color 300ms ease-out;
+    transition: border 300ms ease-out;
   }
   &:disabled {
     color: $bColorPrimaryPurpleDisabled;
@@ -66,6 +62,7 @@
   height: auto;
   &:hover {
     color: $bColorAccentPurpleDark;
+    transition: color 300ms ease-out;
   }
   &:disabled {
     color: $bColorPrimaryPurpleDisabled;
@@ -78,6 +75,7 @@
   color: $bColorBaseWhite;
   &:hover {
     background-color: $bColorSuccess;
+    transition: background-color 300ms ease-out;
   }
   &:disabled {
     background-color: $bColorSuccessDisabled;
@@ -90,8 +88,32 @@
   color: $bColorBaseWhite;
   &:hover {
     background-color: $bDangerHover;
+    transition: background-color 300ms ease-out;
   }
   &:disabled {
     background-color: $bDangerDisabled;
+  }
+}
+
+.grey {
+  @extend .baseButton;
+  border: 1px solid $bColorSecondaryGreyMid;
+  background-color: $bColorBaseWhite;
+  color: $bColorBaseDark1;
+  font-weight: $weight-light;
+  padding: 0 8px;
+  // To compensate the 2 extra height pixels from the border
+  height: 38px;
+  min-height: 38px;
+  &:hover {
+    background-color: $bColorSecondaryBckGrey;
+    border: 1px solid $bColorSecondaryGreyDark;
+    transition: background-color 300ms ease-out;
+    transition: border 300ms ease-out;
+  }
+  &:disabled {
+    background-color: $bColorBaseWhite;
+    border: 1px solid $bColorSecondaryGreyMid;
+    color: $bColorSecondaryGreyMid;
   }
 }
