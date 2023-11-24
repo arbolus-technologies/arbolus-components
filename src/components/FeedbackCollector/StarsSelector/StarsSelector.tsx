@@ -5,16 +5,18 @@ import { ARBOLUS_COLORS } from '../../../theme/colors/colorConstants';
 interface StarsSelectorProps {
   onClickedStar: (clickedValue: number) => void;
   starSelected: number;
+  totalStars?: number;
 }
 
-export const StarsSelector: React.FC<StarsSelectorProps> = ({ onClickedStar, starSelected }) => {
-  const [arrayOfStars, setArrayOfStars] = useState([
-    { value: 1, active: false },
-    { value: 2, active: false },
-    { value: 3, active: false },
-    { value: 4, active: false },
-    { value: 5, active: false }
-  ]);
+export const StarsSelector: React.FC<StarsSelectorProps> = ({
+  onClickedStar,
+  starSelected,
+  totalStars = 5
+}) => {
+  const [arrayOfStars, setArrayOfStars] = useState(
+    Array.from({ length: totalStars }, (v, i) => ({ value: i + 1, active: false }))
+  );
+
   const handleOnClick = (clickedValue: number) => {
     setArrayOfStars((prevStars) =>
       prevStars.map((star) => ({
@@ -39,6 +41,7 @@ export const StarsSelector: React.FC<StarsSelectorProps> = ({ onClickedStar, sta
     <>
       {arrayOfStars.map((star) => (
         <Icon
+          filled={star.active}
           key={star.value}
           name='star'
           fontSize='36px'

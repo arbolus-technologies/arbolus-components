@@ -1,8 +1,6 @@
 {
   "feedbackCollector": {
-    "veryBad": "Very bad",
-    "veryGood": "Very good",
-    "startTyping": "Start typing...",
-    "submit": "Submit"
+    "startTyping": "Start typing what you loved or what we could do better...",
+    "submit": "Submit feedback"
   }
 }

@@ -1,29 +1,38 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import styles from './FeedbackCollector.module.scss';
-import { Controller, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import clsx from 'clsx';
+import React, { useState } from 'react';
+import { Controller, useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
+
+import { ARBOLUS_COLORS } from '../../theme/colors/colorConstants';
+import { useCookie } from '../../utils/hooks/useCookie';
+import { Button } from '../Buttons/Button/Button';
+import { Icon } from '../Icon/Icon';
+import { InputController } from '../Inputs/InputController/InputController';
 import { FeedbackCollectorSchema } from './FeedbackCollectorSchema';
 import { StarsSelector } from './StarsSelector/StarsSelector';
-import clsx from 'clsx';
-import { Icon } from '../Icon/Icon';
-import { Button } from '../Buttons/Button/Button';
-import { useCookie } from '../../utils/hooks/useCookie';
-import { InputController } from '../Inputs/InputController/InputController';
+import { FEEDBACK_COLLECTOR, FEEDBACK_COLLECTOR_STARS } from './constants';
+
+import styles from './FeedbackCollector.module.scss';
+
+export enum FeedbackCollectorDirection {
+  BOTTOM_RIGHT = 'bottom-right',
+  CENTERED = 'centered'
+}
+
+export interface IFeedbackCollector {
+  [FEEDBACK_COLLECTOR]?: string | null;
+  [FEEDBACK_COLLECTOR_STARS]: number;
+}
 
 export interface FeedbackCollectorProps {
   onClickClose: () => void;
   onSubmit: (data: IFeedbackCollector) => void;
   handleOnClickedStar: (star: number) => void;
-  direction: 'bottom-right' | 'centered';
+  direction: FeedbackCollectorDirection;
   cookie: string;
-  title: string;
-  subtitle: string;
-}
-
-export interface IFeedbackCollector {
-  comment?: string | null;
-  stars: number;
+  noBorder?: boolean;
+  question: string;
 }
 
 export const FeedbackCollector: React.FC<FeedbackCollectorProps> = ({
@@ -32,8 +41,8 @@ export const FeedbackCollector: React.FC<FeedbackCollectorProps> = ({
   handleOnClickedStar,
   direction,
   cookie,
-  title,
-  subtitle
+  noBorder,
+  question
 }) => {
   const { t } = useTranslation(`feedbackCollector`);
 
@@ -44,11 +53,11 @@ export const FeedbackCollector: React.FC<FeedbackCollectorProps> = ({
     control,
     handleSubmit,
     formState: { errors }
-  } = useForm<any>({
+  } = useForm<IFeedbackCollector>({
     resolver: yupResolver(FeedbackCollectorSchema),
     defaultValues: {
-      comment: '' || undefined,
-      stars: 0
+      [FEEDBACK_COLLECTOR]: '',
+      [FEEDBACK_COLLECTOR_STARS]: 0
     }
   });
 
@@ -60,15 +69,25 @@ export const FeedbackCollector: React.FC<FeedbackCollectorProps> = ({
     }
   };
 
-  return isCookieStored() ? null : (
+  if (isCookieStored()) {
+    return null;
+  }
+
+  return (
     <div
+      style={{
+        border: noBorder ? 'none' : `1px solid ${ARBOLUS_COLORS.bColorSecondaryGreyMid}`
+      }}
       className={clsx(
-        direction === 'bottom-right' ? styles.feedbackCollectorContainer : styles.container
+        direction === FeedbackCollectorDirection.BOTTOM_RIGHT
+          ? styles.bottomRightContainer
+          : styles.container
       )}
     >
       <div className={styles.iconContainer}>
         <Icon
           fontSize='24px'
+          color={ARBOLUS_COLORS.bColorSecondaryGreyMid}
           name='close'
           onClick={() => {
             onClickClose();
@@ -77,13 +96,10 @@ export const FeedbackCollector: React.FC<FeedbackCollectorProps> = ({
         />
       </div>
       <div className={styles.contentContainer}>
-        <div className={styles.titleSubtitleContainer}>
-          <span className={styles.feedbackTitle}>{title}</span>
-          <span className={styles.feedbackSubTitle}>{subtitle}</span>
-        </div>
+        <span className={styles.feedbackTitle}>{question}</span>
         <div className={styles.starContainer}>
           <Controller
-            name='stars'
+            name={FEEDBACK_COLLECTOR_STARS}
             control={control}
             defaultValue={0}
             render={({ field: { onChange, value } }) => (
@@ -94,23 +110,24 @@ export const FeedbackCollector: React.FC<FeedbackCollectorProps> = ({
             )}
           />
         </div>
-        <div className={styles.infoContainer}>
-          <span>{t('veryGood')}</span>
-          <span>{t('veryBad')}</span>
-        </div>
       </div>
       {isStarSelected && (
-        <div className={styles.feedbackTextContainer}>
+        <div className={clsx(styles.feedbackTextContainer)}>
           <InputController
             control={control}
-            name='comment'
+            name={FEEDBACK_COLLECTOR}
             errors={errors}
             placeholder={t('startTyping')}
             type='textarea'
             size='big'
           />
           <div className={styles.buttonContainer}>
-            <Button onClick={handleSubmit(onSubmit)} text={t('submit')} />
+            <Button
+              type='tertiary'
+              onClick={handleSubmit(onSubmit)}
+              endIcon='chevron_right'
+              text={t('submit')}
+            />
           </div>
         </div>
       )}

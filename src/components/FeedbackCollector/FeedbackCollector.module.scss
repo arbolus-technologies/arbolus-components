@@ -1,14 +1,13 @@
 .container {
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width: 100%;
   background-color: $bColorBaseWhite;
-  border: 1px solid $bColorSecondaryGreyMid;
   border-radius: 6px;
   padding: 16px;
 }
 
-.feedbackCollectorContainer {
+.bottomRightContainer {
   display: flex;
   position: fixed;
   flex-direction: column;
@@ -25,12 +24,6 @@
   font-weight: $weight-semi-bold;
   text-align: center;
   font-size: $size-large;
-  margin-bottom: 8px;
-}
-
-.feedbackSubTitle {
-  text-align: center;
-  font-size: $size-small;
 }
 
 .iconContainer {
@@ -41,6 +34,9 @@
 
 .contentContainer {
   padding: 0px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .starContainer {
@@ -58,11 +54,6 @@
 
 .buttonContainer {
   display: flex;
-  place-content: center;
-}
-
-.titleSubtitleContainer {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 8px;
+  place-content: flex-end;
+  padding: 8px 0;
 }
