@@ -1,5 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { FeedbackCollector, FeedbackCollectorProps } from './FeedbackCollector';
+import {
+  FeedbackCollector,
+  FeedbackCollectorDirection,
+  FeedbackCollectorProps
+} from './FeedbackCollector';
 
 const meta: Meta<FeedbackCollectorProps> = {
   title: 'Design System/FeedbackCollector',
@@ -38,7 +42,7 @@ const meta: Meta<FeedbackCollectorProps> = {
     },
     direction: {
       name: 'direction',
-      options: ['bottom-right', 'center'],
+      options: ['bottom-right', 'centered'],
       control: { type: 'select' },
       table: {
         defaultValue: { summary: 'undefined' }
@@ -54,23 +58,23 @@ const meta: Meta<FeedbackCollectorProps> = {
       },
       description: 'Cookie (change this to see the component)'
     },
-    title: {
-      name: 'title',
-      control: 'text',
-      type: 'string',
+    noBorder: {
+      name: 'noBorder',
+      control: 'boolean',
+      type: 'boolean',
       table: {
-        defaultValue: { summary: 'undefined' }
+        defaultValue: { summary: false }
       },
-      description: 'Title in the feedbackCollector'
+      description: 'Boolean by default false that removes border from feedbackCollector'
     },
-    subtitle: {
-      name: 'subtitle',
+    question: {
+      name: 'question',
       control: 'text',
       type: 'string',
       table: {
         defaultValue: { summary: 'undefined' }
       },
-      description: 'Subtitle in the feedbackCollector'
+      description: 'Question in the feedbackCollector'
     }
   }
 };
@@ -81,9 +85,8 @@ type Story = StoryObj<typeof FeedbackCollector>;
 export const Component: Story = {
   args: {
     cookie: 'cookieName',
-    direction: 'bottom-right',
-    title: 'How is your experience with Canopy?',
-    subtitle:
-      'Tell us about your canopy experience, this will help us to improve the quality of our services'
+    direction: FeedbackCollectorDirection.BOTTOM_RIGHT,
+    question: 'How is your experience with Canopy?',
+    noBorder: false
   }
 };
