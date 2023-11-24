@@ -3,6 +3,7 @@ import React from 'react';
 import { ButtonNativeType, ButtonType } from '../../../models/types';
 import styles from './Button.module.scss';
 import { Icon } from '../../Icon/Icon';
+import { ButtonTypeEnum } from '../../../models/enums';
 
 export interface ButtonProps {
   text: string;
@@ -18,7 +19,7 @@ export interface ButtonProps {
 
 export const Button: React.FC<ButtonProps> = ({
   text,
-  type = 'primary',
+  type = ButtonTypeEnum.PRIMARY,
   onClick,
   disabled = false,
   nativeType = 'button',

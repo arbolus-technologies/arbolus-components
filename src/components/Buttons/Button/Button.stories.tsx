@@ -1,6 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
 import { Button, ButtonProps } from './Button';
+import { ButtonTypeEnum } from '../../../models/enums';
+
+const { CONFIRMATION, GREY, PRIMARY, REJECTION, SECONDARY, TERTIARY } = ButtonTypeEnum;
 
 const meta: Meta<ButtonProps> = {
   title: 'Design System/Buttons/Button',
@@ -22,7 +25,7 @@ const meta: Meta<ButtonProps> = {
     },
     type: {
       name: 'type*',
-      options: ['primary', 'secondary', 'tertiary', 'confirmation', 'rejection'],
+      options: [PRIMARY, SECONDARY, TERTIARY, CONFIRMATION, REJECTION, GREY],
       control: { type: 'select' },
       description: '`required` - Different type of buttons allowed.'
     },
@@ -89,7 +92,7 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
   args: {
     text: 'Primary',
-    type: 'primary',
+    type: PRIMARY,
     nativeType: 'button',
     disabled: false
   },
@@ -104,7 +107,7 @@ export const Secondary: Story = {
   args: {
     ...Primary.args,
     text: 'Secondary',
-    type: 'secondary'
+    type: SECONDARY
   }
 };
 
@@ -112,7 +115,7 @@ export const Tertiary: Story = {
   args: {
     ...Primary.args,
     text: 'Tertiary',
-    type: 'tertiary'
+    type: TERTIARY
   }
 };
 
@@ -120,7 +123,7 @@ export const Confirmation: Story = {
   args: {
     ...Primary.args,
     text: 'Confirmation',
-    type: 'confirmation'
+    type: CONFIRMATION
   }
 };
 
@@ -128,6 +131,14 @@ export const Rejection: Story = {
   args: {
     ...Primary.args,
     text: 'Rejection',
-    type: 'rejection'
+    type: REJECTION
+  }
+};
+
+export const Grey: Story = {
+  args: {
+    ...Primary.args,
+    text: 'Grey',
+    type: GREY
   }
 };
