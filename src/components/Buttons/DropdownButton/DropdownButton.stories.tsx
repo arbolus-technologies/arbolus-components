@@ -27,7 +27,7 @@ const meta: Meta<DropdownButtonProps> = {
       control: 'object',
       type: 'string',
       description:
-        '`required` - Options displayed in the dropdown. Is an object composed of 3 properties: id, text and onClick. Id is an option prop that can set the key and is passed up as a callback if it was needed. The other two props are mandatory.'
+        '`required` - Options displayed in the dropdown. Is an object composed of 3 properties: id, text and onClick. `Id` is an optional prop that can set the key and is passed up as a callback if it is needed. The other two props are mandatory.'
     },
     type: {
       name: 'type*',
@@ -87,8 +87,8 @@ export const DropdownPrimary: Story = {
       }
     ],
     type: PRIMARY,
-    disabled: false,
-    growDirection: GrowDirection.RIGHT
+    growDirection: GrowDirection.RIGHT,
+    disabled: false
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
