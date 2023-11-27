@@ -15,9 +15,9 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #FFFFFF;
+  background-color: $bColorBaseWhite;
   border-radius: 8px;
-  border: 1px solid #CCCED9;
+  border: 1px solid $bColorSecondaryGreyMid;
   min-width: 100%;
   max-width: 300px;
   display: flex;
@@ -27,9 +27,9 @@
 }
 
 .listElement {
-  font-size: 14px;
-  font-weight: 400;
-  color: #80859F;
+  font-size: $size-regular;
+  font-weight: $weight-light;
+  color: $bColorSecondaryGreyDark;
   cursor: pointer;
   user-select: none;
   padding: 4px 16px;
@@ -42,7 +42,7 @@
   -webkit-box-orient: vertical;
 
   &:hover {
-    background-color: #F2F2F5;
-    color: #000A3F;
+    background-color: $bColorSecondaryGreyLight;
+    color: $bColorBaseDark1;
   }
 }
