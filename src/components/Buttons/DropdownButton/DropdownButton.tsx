@@ -5,9 +5,9 @@ import { Button } from '../Button/Button';
 import styles from './DropdownButton.module.scss';
 
 interface DropdownOption {
-  id: string;
+  id?: string;
   text: string;
-  onClick: () => void;
+  onClick: (id?: string) => void;
 }
 
 export interface DropdownButtonProps {
@@ -22,7 +22,7 @@ export interface DropdownButtonProps {
 export const DropdownButton: React.FC<DropdownButtonProps> = ({
   buttonText,
   dropdownOptions,
-  type,
+  type = ButtonTypeEnum.PRIMARY,
   growDirection = GrowDirection.LEFT,
   disabled = false,
   id
@@ -40,17 +40,20 @@ export const DropdownButton: React.FC<DropdownButtonProps> = ({
       />
       {isOpen && (
         <ul className={styles.dropdown}>
-          {dropdownOptions.map((dropdownOption) => (
-            <li
-              key={dropdownOption.id}
-              className={styles.listElement}
-              title={dropdownOption.text}
-              onClick={dropdownOption.onClick}
-              onKeyDown={dropdownOption.onClick}
-            >
-              {dropdownOption.text}
-            </li>
-          ))}
+          {dropdownOptions.map((dropdownOption) => {
+            const { id, onClick, text } = dropdownOption;
+            return (
+              <li
+                key={id ?? text}
+                className={styles.listElement}
+                title={text}
+                onClick={() => onClick(id)}
+                onKeyDown={() => onClick(id)}
+              >
+                {text}
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>

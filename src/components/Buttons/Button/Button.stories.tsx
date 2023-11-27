@@ -27,6 +27,9 @@ const meta: Meta<ButtonProps> = {
       name: 'type*',
       options: [PRIMARY, SECONDARY, TERTIARY, CONFIRMATION, REJECTION, GREY],
       control: { type: 'select' },
+      table: {
+        defaultValue: { summary: PRIMARY }
+      },
       description: '`required` - Different type of buttons allowed.'
     },
     onClick: {

@@ -17,27 +17,34 @@ const meta: Meta<DropdownButtonProps> = {
   },
   argTypes: {
     buttonText: {
-      name: 'text*',
+      name: 'buttonText*',
       control: 'text',
       type: 'string',
       description: '`required` - Text within the dropdown button.'
     },
     dropdownOptions: {
-      name: 'options*',
+      name: 'dropdownOptions*',
       control: 'object',
       type: 'string',
-      description: '`required` - Options displayed in the dropdown.'
+      description:
+        '`required` - Options displayed in the dropdown. Is an object composed of 3 properties: id, text and onClick. Id is an option prop that can set the key and is passed up as a callback if it was needed. The other two props are mandatory.'
     },
     type: {
       name: 'type*',
       options: [PRIMARY, SECONDARY],
       control: { type: 'select' },
+      table: {
+        defaultValue: { summary: ButtonTypeEnum.PRIMARY }
+      },
       description: '`required` - Different types of dropdown button allowed.'
     },
     growDirection: {
       name: 'growDirection*',
       options: [GrowDirection.LEFT, GrowDirection.RIGHT],
       control: { type: 'select' },
+      table: {
+        defaultValue: { summary: GrowDirection.LEFT }
+      },
       description:
         '`required` - Direction where the dropdown list will grow. It affects the button positioning relative to the dropdown.'
     },
