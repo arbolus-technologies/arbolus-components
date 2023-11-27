@@ -27,6 +27,7 @@ export const Icon: React.FC<IconProps> = ({
 }) => (
   <span
     onClick={onClick}
+    onKeyDown={onClick}
     style={{
       fontSize,
       color
