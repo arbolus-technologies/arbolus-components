@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ButtonTypeEnum, GrowDirection } from '../../../models/enums';
 import { Button } from '../Button/Button';
 import styles from './DropdownButton.module.scss';
@@ -27,10 +27,36 @@ export const DropdownButton: React.FC<DropdownButtonProps> = ({
   disabled = false,
   id
 }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        // Click is outside the dropdown
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleOutsideClick);
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (disabled) {
+      setIsOpen(false);
+    }
+  }, [disabled]);
 
   return (
-    <div className={clsx(styles.container, styles[growDirection])} id={id} data-testid={id}>
+    <div
+      className={clsx(styles.container, styles[growDirection])}
+      id={id}
+      data-testid={id}
+      ref={dropdownRef}
+    >
       <Button
         text={buttonText}
         endIcon={isOpen ? 'expand_less' : 'expand_more'}
@@ -47,8 +73,14 @@ export const DropdownButton: React.FC<DropdownButtonProps> = ({
                 key={id ?? text}
                 className={styles.listElement}
                 title={text}
-                onClick={() => onClick(id)}
-                onKeyDown={() => onClick(id)}
+                onClick={() => {
+                  setIsOpen((prev) => !prev);
+                  return onClick(id);
+                }}
+                onKeyDown={() => {
+                  setIsOpen((prev) => !prev);
+                  return onClick(id);
+                }}
               >
                 {text}
               </li>
