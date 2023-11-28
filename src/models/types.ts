@@ -7,3 +7,6 @@ export type ButtonType =
   | 'grey';
 
 export type ButtonNativeType = 'submit' | 'reset' | 'button';
+
+export type GrowDirectionType = 'left' | 'right';
+export type DropdownType = 'primary' | 'secondary';
