@@ -27,7 +27,7 @@ const meta: Meta<DropdownButtonProps> = {
       control: 'object',
       type: 'string',
       description:
-        '`required` - Options displayed in the dropdown. Is an object composed of 3 properties: id, text and onClick. `Id` is an optional prop that can set the key and is passed up as a callback if it is needed. The other two props are mandatory.'
+        '`required` - Options displayed in the dropdown. Is an array of objects composed of 3 properties: optionId, text and onClick.'
     },
     type: {
       name: 'type*',
@@ -77,11 +77,11 @@ export const DropdownPrimary: Story = {
   args: {
     buttonText: 'Primary',
     dropdownOptions: [
-      { id: 'id1', onClick: () => false, text: 'Option 1' },
-      { id: 'id2', onClick: () => false, text: 'Option 2' },
-      { id: 'id3', onClick: () => false, text: 'Option 3' },
+      { optionId: 'id1', onClick: () => false, text: 'Option 1' },
+      { optionId: 'id2', onClick: () => false, text: 'Option 2' },
+      { optionId: 'id3', onClick: () => false, text: 'Option 3' },
       {
-        id: 'id4',
+        optionId: 'id4',
         onClick: () => false,
         text: 'Option with a super very long text that is not going to fit'
       }
