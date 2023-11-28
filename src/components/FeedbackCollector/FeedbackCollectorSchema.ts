@@ -1,4 +1,3 @@
-import i18next from 'i18next';
 import * as Yup from 'yup';
 
 import { IFeedbackCollector } from './FeedbackCollector';
@@ -12,9 +11,7 @@ export const FeedbackCollectorSchema = Yup.object<IFeedbackCollector>().shape({
   [FEEDBACK_COLLECTOR]: Yup.string()
     .max(
       FEEDBACK_COLLECTOR_MAX_LENGTH,
-      i18next.t('feedbackCollector:maxLength', {
-        length: FEEDBACK_COLLECTOR_MAX_LENGTH
-      })
+      `Feedback can't be longer than ${FEEDBACK_COLLECTOR_MAX_LENGTH} characters`
     )
     .nullable(),
   [FEEDBACK_COLLECTOR_STARS]: Yup.number().required()

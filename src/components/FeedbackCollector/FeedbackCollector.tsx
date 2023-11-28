@@ -2,7 +2,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import clsx from 'clsx';
 import React, { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
-import { useTranslation } from 'react-i18next';
 
 import { ARBOLUS_COLORS } from '../../theme/colors/colorConstants';
 import { useCookie } from '../../utils/hooks/useCookie';
@@ -44,8 +43,6 @@ export const FeedbackCollector: React.FC<FeedbackCollectorProps> = ({
   noBorder,
   question
 }) => {
-  const { t } = useTranslation(`feedbackCollector`);
-
   const [isStarSelected, setIsStarSelected] = useState(false);
   const { setCookie, isCookieStored } = useCookie(cookie);
 
@@ -117,7 +114,7 @@ export const FeedbackCollector: React.FC<FeedbackCollectorProps> = ({
             control={control}
             name={FEEDBACK_COLLECTOR}
             errors={errors}
-            placeholder={t('startTyping')}
+            placeholder={'Start typing what you loved or what we could do better...'}
             type='textarea'
             size='big'
           />
@@ -126,7 +123,7 @@ export const FeedbackCollector: React.FC<FeedbackCollectorProps> = ({
               type='tertiary'
               onClick={handleSubmit(onSubmit)}
               endIcon='chevron_right'
-              text={t('submit')}
+              text='Submit'
             />
           </div>
         </div>

@@ -11,8 +11,7 @@ const config: StorybookConfig = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-coverage',
-    '@storybook/addon-interactions',
-    'storybook-react-i18next' //👈 Registers the addon
+    '@storybook/addon-interactions'
   ],
   core: {
     builder: '@storybook/builder-vite'
