@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import reactLogo from './theme/assets/react.svg';
+import { FeedbackCollector, FeedbackCollectorDirection } from './components';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,6 +16,14 @@ function App() {
           <img src={reactLogo} className='logo react' alt='React logo' />
         </a>
       </div>
+      <FeedbackCollector
+        cookie=''
+        direction={FeedbackCollectorDirection.BOTTOM_RIGHT}
+        handleOnClickedStar={console.log}
+        onClickClose={console.log}
+        onSubmit={console.log}
+        question='How likely are you to recommend our company to a friend or colleague?'
+      />
       <h1>Vite + React</h1>
       <div className='card'>
         <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
