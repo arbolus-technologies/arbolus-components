@@ -13,14 +13,16 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "locales"
   ],
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "start": "vite --port 3000",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && npm run copy-locales",
+    "copy-locales": "cp -R locales dist/",
     "storybook": "storybook dev",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=fd430b667236",

@@ -2,7 +2,7 @@ import { initReactI18next } from 'react-i18next';
 import i18n from 'i18next';
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import enLang from './locale/en.json';
+import enLang from './locales/en.json';
 
 const ns = ['common'];
 const supportedLngs = ['en'];
