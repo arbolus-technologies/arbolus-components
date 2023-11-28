@@ -12,7 +12,7 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'i18next', 'react-i18next'],
+      external: ['react', 'react-dom'],
       output: {
         globals: {
           react: 'React',
