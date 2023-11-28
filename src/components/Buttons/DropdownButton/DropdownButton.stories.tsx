@@ -30,23 +30,23 @@ const meta: Meta<DropdownButtonProps> = {
         '`required` - Options displayed in the dropdown. Is an array of objects composed of 3 properties: optionId, text and onClick.'
     },
     type: {
-      name: 'type*',
+      name: 'type',
       options: [PRIMARY, SECONDARY],
       control: { type: 'select' },
       table: {
         defaultValue: { summary: ButtonTypeEnum.PRIMARY }
       },
-      description: '`required` - Different types of dropdown button allowed.'
+      description: 'Different types of dropdown button allowed.'
     },
     growDirection: {
-      name: 'growDirection*',
+      name: 'growDirection',
       options: [GrowDirection.LEFT, GrowDirection.RIGHT],
       control: { type: 'select' },
       table: {
         defaultValue: { summary: GrowDirection.LEFT }
       },
       description:
-        '`required` - Direction where the dropdown list will grow. It affects the button positioning relative to the dropdown.'
+        'Direction where the dropdown list will grow. It affects the button positioning relative to the dropdown.'
     },
     disabled: {
       name: 'disabled',

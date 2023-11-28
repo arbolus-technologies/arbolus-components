@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ButtonTypeEnum, GrowDirection } from '../../../models/enums';
 import { Button } from '../Button/Button';
 import styles from './DropdownButton.module.scss';
+import { DropdownType, GrowDirectionType } from '../../../models/types';
 
 interface DropdownOption {
   optionId: string;
@@ -13,8 +14,8 @@ interface DropdownOption {
 export interface DropdownButtonProps {
   buttonText: string;
   dropdownOptions: DropdownOption[];
-  type: ButtonTypeEnum.PRIMARY | ButtonTypeEnum.SECONDARY;
-  growDirection: GrowDirection.LEFT | GrowDirection.RIGHT;
+  type?: DropdownType;
+  growDirection?: GrowDirectionType;
   disabled?: boolean;
   id?: string;
 }
