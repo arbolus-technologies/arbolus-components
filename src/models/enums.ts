@@ -6,3 +6,8 @@ export enum ButtonTypeEnum {
   REJECTION = 'rejection',
   GREY = 'grey'
 }
+
+export enum GrowDirection {
+  LEFT = 'left',
+  RIGHT = 'right'
+}

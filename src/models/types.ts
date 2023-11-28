@@ -5,4 +5,5 @@ export type ButtonType =
   | 'confirmation'
   | 'rejection'
   | 'grey';
+
 export type ButtonNativeType = 'submit' | 'reset' | 'button';
