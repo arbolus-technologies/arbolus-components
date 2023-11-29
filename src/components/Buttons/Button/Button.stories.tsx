@@ -145,3 +145,11 @@ export const Grey: Story = {
     type: GREY
   }
 };
+
+export const Red: Story = {
+  args: {
+    ...Primary.args,
+    text: 'Red',
+    type: GREY
+  }
+};
