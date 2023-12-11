@@ -5681,7 +5681,7 @@ __metadata:
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-react: ^7.32.2
     eslint-plugin-react-hooks: ^4.6.0
-    material-symbols: ^0.10.0
+    material-symbols: ^0.14.2
     path: ^0.12.7
     prettier: ^2.8.4
     react: ^18.2.0
@@ -10854,10 +10854,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"material-symbols@npm:^0.10.0":
-  version: 0.10.4
-  resolution: "material-symbols@npm:0.10.4"
-  checksum: f5df04438fc021914fe236fb096028ba30405187787879f55920c2c1f4c2e07b8a1cc3995f31e7bac1c13b89eeb23b34faaa29d61f1f39947f06b2a5fe06cb21
+"material-symbols@npm:^0.14.2":
+  version: 0.14.2
+  resolution: "material-symbols@npm:0.14.2"
+  checksum: 2a29f793578c32199a678e418b50a010e609b5ceea26bac369c29d3a9f1ccb190758eeb90ef6fcad26eca3cc1be861119c986d6b902fdd963f703873fe54fc7e
   languageName: node
   linkType: hard
 
