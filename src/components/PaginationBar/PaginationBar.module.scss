@@ -1,0 +1,26 @@
+.paginationContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 24px;
+  justify-content: center;
+}
+
+.arrowsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.currentPage {
+  font-size: $size-regular;
+  font-weight: $weight-light;
+  color: $bColorBaseDark1;
+  user-select: none;
+  margin-bottom: 0;
+}
+
+.pageNumber {
+  font-weight: $weight-bold;
+}
