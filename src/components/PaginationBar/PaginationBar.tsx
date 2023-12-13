@@ -19,7 +19,7 @@ export const PaginationBar: React.FC<PaginationBarProps> = ({
 }): JSX.Element => {
   const [hasPreviousPage, setHasPreviousPage] = useState(false);
   const [hasNextPage, setHasNextPage] = useState(false);
-  const [totalPages, setTotalPages] = useState<number | null>(null);
+  const [totalPages, setTotalPages] = useState<number>(1);
 
   useEffect(() => {
     const totalPagesCount = Math.ceil(totalCount / itemsPerPage);
@@ -69,7 +69,7 @@ export const PaginationBar: React.FC<PaginationBarProps> = ({
         <Icon
           name='last_page'
           fontSize='24px'
-          onClick={(): void => onSetPage(totalPages ?? 1)}
+          onClick={(): void => onSetPage(totalPages)}
           disabled={!hasNextPage}
           color={nextArrowColor}
         />
