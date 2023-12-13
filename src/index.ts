@@ -8,3 +8,4 @@ export {
   IFeedbackCollector
 } from './components/FeedbackCollector/FeedbackCollector';
 export { Icon, IconProps } from './components/Icon/Icon';
+export { PaginationBar, PaginationBarProps } from './components/PaginationBar/PaginationBar';
