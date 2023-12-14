@@ -1,0 +1,7 @@
+.title {
+  font-size: $size-large;
+  font-weight: $weight-light;
+  color: $bColorSecondaryGreyDark;
+  @include text-ellipsis();
+  line-height: $size-xx-large;
+}

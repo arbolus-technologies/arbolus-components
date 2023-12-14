@@ -1,0 +1,21 @@
+.profileImage {
+  min-width: 48px;
+  min-height: 48px;
+  max-width: 48px;
+  max-height: 48px;
+  border-radius: 50%;
+}
+
+.roundedLetters {
+  min-width: 48px;
+  min-height: 48px;
+  max-width: 48px;
+  max-height: 48px;
+  border-radius: 50%;
+  border: 1px solid $bColorSecondaryGreyMid;
+  color: $bColorSecondaryGreyDark;
+  background: $bColorBaseWhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

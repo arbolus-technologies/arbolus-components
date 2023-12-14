@@ -1,0 +1,8 @@
+.name {
+  font-size: $size-large;
+  font-weight: $weight-semi-bold;
+  line-height: $size-xx-large;
+  display: flex;
+  @include text-ellipsis();
+  gap: 8px;
+}
