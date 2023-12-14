@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 import { Meta, StoryObj } from '@storybook/react';
 import { ArbolusAvatar, ArbolusAvatarProps } from './ArbolusAvatar';
 
