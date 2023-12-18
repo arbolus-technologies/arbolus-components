@@ -1,2 +1,2 @@
 # arbolus-components
-Latest deployed version: https://640f4f1e00a95623e1629b45-xecvfxpieq.chromatic.com/?path=/story/design-system-buttons-button--primary
+[Latest deployed version](https://master--640f4f1e00a95623e1629b45.chromatic.com)
