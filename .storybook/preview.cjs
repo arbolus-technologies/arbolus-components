@@ -1,6 +1,7 @@
 import 'material-symbols';
 import '../src/index.scss'; // Your local styles
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'material-symbols';
 
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
