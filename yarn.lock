@@ -4184,43 +4184,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/builder-vite@npm:7.6.4":
-  version: 7.6.4
-  resolution: "@storybook/builder-vite@npm:7.6.4"
-  dependencies:
-    "@storybook/channels": 7.6.4
-    "@storybook/client-logger": 7.6.4
-    "@storybook/core-common": 7.6.4
-    "@storybook/csf-plugin": 7.6.4
-    "@storybook/node-logger": 7.6.4
-    "@storybook/preview": 7.6.4
-    "@storybook/preview-api": 7.6.4
-    "@storybook/types": 7.6.4
-    "@types/find-cache-dir": ^3.2.1
-    browser-assert: ^1.2.1
-    es-module-lexer: ^0.9.3
-    express: ^4.17.3
-    find-cache-dir: ^3.0.0
-    fs-extra: ^11.1.0
-    magic-string: ^0.30.0
-    rollup: ^2.25.0 || ^3.3.0
-  peerDependencies:
-    "@preact/preset-vite": "*"
-    typescript: ">= 4.3.x"
-    vite: ^3.0.0 || ^4.0.0 || ^5.0.0
-    vite-plugin-glimmerx: "*"
-  peerDependenciesMeta:
-    "@preact/preset-vite":
-      optional: true
-    typescript:
-      optional: true
-    vite-plugin-glimmerx:
-      optional: true
-  checksum: c7b58aaed83a25ddc4ebb8efb2db3dc3799cb7098712fd09a77b8200c3373f100428e2e19df5d1e938011915a56b21fc91f45e70a5e78fe49e5c53b7c1df3091
-  languageName: node
-  linkType: hard
-
-"@storybook/builder-vite@npm:^7.6.6":
+"@storybook/builder-vite@npm:7.6.6, @storybook/builder-vite@npm:^7.6.6":
   version: 7.6.6
   resolution: "@storybook/builder-vite@npm:7.6.6"
   dependencies:
@@ -4404,6 +4368,16 @@ __metadata:
     "@storybook/client-logger": 7.6.4
     "@storybook/preview-api": 7.6.4
   checksum: 3704e9664cd5ecc8561955e0377b07ae7c91bfb966f93a1f1072f05dad8833da4e7d69718a3deec0697966b55446b09a2a77f1133888b5656e13a043e7e6d21a
+  languageName: node
+  linkType: hard
+
+"@storybook/core-client@npm:7.6.6":
+  version: 7.6.6
+  resolution: "@storybook/core-client@npm:7.6.6"
+  dependencies:
+    "@storybook/client-logger": 7.6.6
+    "@storybook/preview-api": 7.6.6
+  checksum: 239a256d845789032bd0896ff59e4c4690f748ac45522e9d6a8bee1ab240fe4325cce2f4d5759b4c763d666942020425d41981b4a21e9e17485281749ba14b66
   languageName: node
   linkType: hard
 
@@ -4621,6 +4595,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/docs-tools@npm:7.6.6":
+  version: 7.6.6
+  resolution: "@storybook/docs-tools@npm:7.6.6"
+  dependencies:
+    "@storybook/core-common": 7.6.6
+    "@storybook/preview-api": 7.6.6
+    "@storybook/types": 7.6.6
+    "@types/doctrine": ^0.0.3
+    assert: ^2.1.0
+    doctrine: ^3.0.0
+    lodash: ^4.17.21
+  checksum: 4ca6b8534f3f8e474d23b8e088a65b5f33147a85efc8e4b559a594ad8092d129637c2075af0abd4265d24323b52b50a2b12d5c8cdaa280c96aa06aed681115e5
+  languageName: node
+  linkType: hard
+
 "@storybook/expect@npm:storybook-jest":
   version: 28.1.3-5
   resolution: "@storybook/expect@npm:28.1.3-5"
@@ -4751,13 +4740,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/preview@npm:7.6.4":
-  version: 7.6.4
-  resolution: "@storybook/preview@npm:7.6.4"
-  checksum: 09e8bcd4c87011b5788337abd4cba043830a4da0f3d10912544bc68769a6b5382b45eff9dd21edfcf2a01cc7503534626505021b4d813e8fa779a762d203df01
-  languageName: node
-  linkType: hard
-
 "@storybook/preview@npm:7.6.6":
   version: 7.6.6
   resolution: "@storybook/preview@npm:7.6.6"
@@ -4775,14 +4757,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react-vite@npm:^7.4.0":
-  version: 7.6.4
-  resolution: "@storybook/react-vite@npm:7.6.4"
+"@storybook/react-dom-shim@npm:7.6.6":
+  version: 7.6.6
+  resolution: "@storybook/react-dom-shim@npm:7.6.6"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 03f819ccc41ed366ca21feb39b7ae1533e6204ae2e01a65e3f5b1dc156a6dd7fdc3094b1f82a5bd88ae1d33b8a08f5a297fd9ffcb2703c4fec75b91bfbbb92a2
+  languageName: node
+  linkType: hard
+
+"@storybook/react-vite@npm:^7.6.6":
+  version: 7.6.6
+  resolution: "@storybook/react-vite@npm:7.6.6"
   dependencies:
     "@joshwooding/vite-plugin-react-docgen-typescript": 0.3.0
     "@rollup/pluginutils": ^5.0.2
-    "@storybook/builder-vite": 7.6.4
-    "@storybook/react": 7.6.4
+    "@storybook/builder-vite": 7.6.6
+    "@storybook/react": 7.6.6
     "@vitejs/plugin-react": ^3.0.1
     magic-string: ^0.30.0
     react-docgen: ^7.0.0
@@ -4790,11 +4782,47 @@ __metadata:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     vite: ^3.0.0 || ^4.0.0 || ^5.0.0
-  checksum: eae7bd933921ff50c43caf45d601f8ebf13d746dd01382ec49672f5eeff1196b55774eecae799b1a5445757a7589a02cf480952afa85f1ab84e848df4a13f66b
+  checksum: b37a40e2cbac3e5dc6d6d0fdefc4b69b0977bfa7e3f247d8d2dc896e2fbeedf7a9c9fa2293fb2b91a12c92f44de08138f3526d998c3a3c4bd2e6cf37f80e1274
   languageName: node
   linkType: hard
 
-"@storybook/react@npm:7.6.4, @storybook/react@npm:^7.4.0":
+"@storybook/react@npm:7.6.6":
+  version: 7.6.6
+  resolution: "@storybook/react@npm:7.6.6"
+  dependencies:
+    "@storybook/client-logger": 7.6.6
+    "@storybook/core-client": 7.6.6
+    "@storybook/docs-tools": 7.6.6
+    "@storybook/global": ^5.0.0
+    "@storybook/preview-api": 7.6.6
+    "@storybook/react-dom-shim": 7.6.6
+    "@storybook/types": 7.6.6
+    "@types/escodegen": ^0.0.6
+    "@types/estree": ^0.0.51
+    "@types/node": ^18.0.0
+    acorn: ^7.4.1
+    acorn-jsx: ^5.3.1
+    acorn-walk: ^7.2.0
+    escodegen: ^2.1.0
+    html-tags: ^3.1.0
+    lodash: ^4.17.21
+    prop-types: ^15.7.2
+    react-element-to-jsx-string: ^15.0.0
+    ts-dedent: ^2.0.0
+    type-fest: ~2.19
+    util-deprecate: ^1.0.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    typescript: "*"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 65ed8db49c99254641775c8f5fc8da606127f3dbd5735e02f2e10e5509d444fa7a2d2a47f2c2d7e0129095e7ffbbc96807a1f952acf888508526d775cc66852b
+  languageName: node
+  linkType: hard
+
+"@storybook/react@npm:^7.4.0":
   version: 7.6.4
   resolution: "@storybook/react@npm:7.6.4"
   dependencies:
@@ -6053,7 +6081,7 @@ __metadata:
     "@storybook/builder-vite": ^7.6.6
     "@storybook/jest": ^0.2.2
     "@storybook/react": ^7.4.0
-    "@storybook/react-vite": ^7.4.0
+    "@storybook/react-vite": ^7.6.6
     "@storybook/testing-library": ^0.2.0
     "@storybook/theming": ^7.6.6
     "@types/react": ^18.2.15
