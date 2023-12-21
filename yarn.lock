@@ -6086,7 +6086,7 @@ __metadata:
     typescript: ^5.0.4
     universal-cookie: ^6.1.1
     vite: ^5.0.10
-    vite-plugin-css-injected-by-js: ^3.3.0
+    vite-plugin-css-injected-by-js: ^3.3.1
     vite-plugin-dts: ^3.6.3
     yup: ^1.3.3
   languageName: unknown
@@ -15778,12 +15778,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-css-injected-by-js@npm:^3.3.0":
-  version: 3.3.0
-  resolution: "vite-plugin-css-injected-by-js@npm:3.3.0"
+"vite-plugin-css-injected-by-js@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "vite-plugin-css-injected-by-js@npm:3.3.1"
   peerDependencies:
     vite: ">2.0.0-0"
-  checksum: bacc78de4849795415d3175d700dc93ff7698e1ba4e47bb6d3b55c5f6d76df04c8bae7ae9bc59fd3be0097ebe25707f88d1ed6cfac4ccbb772baac93c87395f3
+  checksum: 8f91afa552064acd1efd8ca890a9d5ee7c1c1c80fe6956b974786d80b0b6f49a29849e8dfae07993fca26bff3c0213ee7f941ef58c38a9291e7281aa629f506b
   languageName: node
   linkType: hard
 
