@@ -54,6 +54,33 @@ const meta: Meta<IconButtonProps> = {
       },
       description:
         'IconButton id. It is assigned automatically as the component id and the data-testid.'
+    },
+    borderColor: {
+      name: 'borderColor',
+      control: 'color',
+      type: 'string',
+      table: {
+        defaultValue: { summary: '#6157FC' }
+      },
+      description: 'Icon border color.'
+    },
+    iconColor: {
+      name: 'iconColor',
+      control: 'color',
+      type: 'string',
+      table: {
+        defaultValue: { summary: '#6157FC' }
+      },
+      description: 'Inner icon color.'
+    },
+    backgroundColor: {
+      name: 'backgroundColor',
+      control: 'color',
+      type: 'string',
+      table: {
+        defaultValue: { summary: '#FFFFFF' }
+      },
+      description: 'Icon background color.'
     }
   }
 };
