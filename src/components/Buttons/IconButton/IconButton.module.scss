@@ -5,9 +5,8 @@
   align-items: center;
   padding: 7px; // Should be 8px but icon has 1px extra as inherit padding
   border-radius: 8px;
-  border: 1px solid $bColorBasePurple;
-  background-color: $bColorBaseWhite;
-  color: $bColorBasePurple;
+  border-width: 1px;
+  border-style: solid;
   &:hover {
     color: $bColorAccentPurpleDark;
     border: 1px solid $bColorAccentPurpleDark;
