@@ -4429,16 +4429,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/core-client@npm:7.6.4":
-  version: 7.6.4
-  resolution: "@storybook/core-client@npm:7.6.4"
-  dependencies:
-    "@storybook/client-logger": 7.6.4
-    "@storybook/preview-api": 7.6.4
-  checksum: 3704e9664cd5ecc8561955e0377b07ae7c91bfb966f93a1f1072f05dad8833da4e7d69718a3deec0697966b55446b09a2a77f1133888b5656e13a043e7e6d21a
-  languageName: node
-  linkType: hard
-
 "@storybook/core-common@npm:7.6.10":
   version: 7.6.10
   resolution: "@storybook/core-common@npm:7.6.10"
@@ -4947,7 +4937,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react@npm:7.6.10":
+"@storybook/react@npm:7.6.10, @storybook/react@npm:^7.6.10":
   version: 7.6.10
   resolution: "@storybook/react@npm:7.6.10"
   dependencies:
@@ -4980,42 +4970,6 @@ __metadata:
     typescript:
       optional: true
   checksum: cd5aebe7d6c2d2f75c80adb4ad76d8827b1078895e890b9088cb0069c912edf5900876ac215da2fe75412fc76d2ba5b65642074c54e3cb25fe99dc20c91dbe4b
-  languageName: node
-  linkType: hard
-
-"@storybook/react@npm:^7.4.0":
-  version: 7.6.4
-  resolution: "@storybook/react@npm:7.6.4"
-  dependencies:
-    "@storybook/client-logger": 7.6.4
-    "@storybook/core-client": 7.6.4
-    "@storybook/docs-tools": 7.6.4
-    "@storybook/global": ^5.0.0
-    "@storybook/preview-api": 7.6.4
-    "@storybook/react-dom-shim": 7.6.4
-    "@storybook/types": 7.6.4
-    "@types/escodegen": ^0.0.6
-    "@types/estree": ^0.0.51
-    "@types/node": ^18.0.0
-    acorn: ^7.4.1
-    acorn-jsx: ^5.3.1
-    acorn-walk: ^7.2.0
-    escodegen: ^2.1.0
-    html-tags: ^3.1.0
-    lodash: ^4.17.21
-    prop-types: ^15.7.2
-    react-element-to-jsx-string: ^15.0.0
-    ts-dedent: ^2.0.0
-    type-fest: ~2.19
-    util-deprecate: ^1.0.2
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    typescript: "*"
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: 6417da79cdc3cdc826e4baa1be5309be0c6e3c14b940924a006cca473fd432d66be992260111ff054cb771d41dff9891183bf4c6292aa83113d7179e57b0a966
   languageName: node
   linkType: hard
 
@@ -6253,7 +6207,7 @@ __metadata:
     "@storybook/addons": ^7.4.0
     "@storybook/builder-vite": ^7.6.6
     "@storybook/jest": ^0.2.2
-    "@storybook/react": ^7.4.0
+    "@storybook/react": ^7.6.10
     "@storybook/react-vite": ^7.6.10
     "@storybook/testing-library": ^0.2.0
     "@storybook/theming": ^7.6.6
