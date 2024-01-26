@@ -30,7 +30,7 @@
     "spellcheck": "cspell \"src/**/{*.ts}\" --config cspell.json"
   },
   "dependencies": {
-    "@hookform/resolvers": "^3.3.2",
+    "@hookform/resolvers": "^3.3.4",
     "@types/yup": "^0.32.0",
     "clsx": "^2.0.0",
     "material-symbols": "^0.14.2",
