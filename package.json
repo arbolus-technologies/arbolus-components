@@ -75,7 +75,7 @@
     "path": "^0.12.7",
     "prettier": "^3.1.1",
     "semantic-release": "^21.0.2",
-    "storybook": "^7.4.0",
+    "storybook": "^7.6.10",
     "typescript": "^5.0.4",
     "vite": "^5.0.10",
     "vite-plugin-css-injected-by-js": "^3.3.0",
