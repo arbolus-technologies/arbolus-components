@@ -78,7 +78,7 @@
     "storybook": "^7.6.10",
     "typescript": "^5.0.4",
     "vite": "^5.0.10",
-    "vite-plugin-css-injected-by-js": "^3.3.0",
+    "vite-plugin-css-injected-by-js": "^3.4.0",
     "vite-plugin-dts": "^3.6.3"
   },
   "release": {
