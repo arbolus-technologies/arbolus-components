@@ -28,13 +28,13 @@ const meta: Meta<PaginationBarProps> = {
         '`required` - Total number of items that must be considered in the pagination process.'
     },
     onSetPage: {
-      name: '*onSetPage',
+      name: 'onSetPage*',
       action: 'clicked',
       description:
         '`required` - Callback method when clicking a navigation arrow. It returns the page index as a param.'
     },
     itemsPerPage: {
-      name: '*itemsPerPage',
+      name: 'itemsPerPage*',
       control: 'number',
       type: 'number',
       description: '`required` - Amount of items that should be displayed per page.'
