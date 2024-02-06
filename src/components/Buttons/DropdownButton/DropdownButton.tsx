@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import React, { useEffect, useRef, useState } from 'react';
-import { ButtonTypeEnum, GrowDirection } from '../../../models/enums';
+import { DropdownTypeEnum, GrowDirection } from '../../../models/enums';
+import { DropdownType, GrowDirectionType } from '../../../models/types';
 import { Button } from '../Button/Button';
 import styles from './DropdownButton.module.scss';
-import { DropdownType, GrowDirectionType } from '../../../models/types';
 
 interface DropdownOption {
   optionId: string;
@@ -23,7 +23,7 @@ export interface DropdownButtonProps {
 export const DropdownButton: React.FC<DropdownButtonProps> = ({
   buttonText,
   dropdownOptions,
-  type = ButtonTypeEnum.PRIMARY,
+  type = DropdownTypeEnum.PRIMARY,
   growDirection = GrowDirection.LEFT,
   disabled = false,
   id

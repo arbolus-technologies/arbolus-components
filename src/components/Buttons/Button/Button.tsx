@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonTypeEnum } from '../../../models/enums';
+import { ButtonNativeTypeEnum, ButtonTypeEnum } from '../../../models/enums';
 import { ButtonNativeType, ButtonType } from '../../../models/types';
 import { Icon } from '../../Icon/Icon';
 import styles from './Button.module.scss';
@@ -21,7 +21,7 @@ export const Button: React.FC<ButtonProps> = ({
   type = ButtonTypeEnum.PRIMARY,
   onClick,
   disabled = false,
-  nativeType = 'button',
+  nativeType = ButtonNativeTypeEnum.BUTTON,
   startIcon,
   endIcon,
   id

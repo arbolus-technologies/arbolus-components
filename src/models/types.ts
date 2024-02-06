@@ -1,14 +1,16 @@
-export type ButtonType =
-  | 'primary'
-  | 'secondary'
-  | 'tertiary'
-  | 'confirmation'
-  | 'rejection'
-  | 'grey';
+import {
+  ButtonNativeTypeEnum,
+  ButtonTypeEnum,
+  DropdownTypeEnum,
+  GrowDirection,
+  RadioButtonSizeEnum
+} from './enums';
 
-export type ButtonNativeType = 'submit' | 'reset' | 'button';
+export type ButtonType = `${ButtonTypeEnum}`;
 
-export type GrowDirectionType = 'left' | 'right';
-export type DropdownType = 'primary' | 'secondary';
+export type ButtonNativeType = `${ButtonNativeTypeEnum}`;
 
-export type RadioButtonSize = 'small' | 'large';
+export type GrowDirectionType = `${GrowDirection}`;
+export type DropdownType = `${DropdownTypeEnum}`;
+
+export type RadioButtonSize = `${RadioButtonSizeEnum}`;

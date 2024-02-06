@@ -16,3 +16,14 @@ export enum RadioButtonSizeEnum {
   SMALL = 'small',
   LARGE = 'large'
 }
+
+export enum DropdownTypeEnum {
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary'
+}
+
+export enum ButtonNativeTypeEnum {
+  SUBMIT = 'submit',
+  RESET = 'reset',
+  BUTTON = 'button'
+}

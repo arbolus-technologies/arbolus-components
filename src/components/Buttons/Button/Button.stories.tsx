@@ -1,9 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
 import { Button, ButtonProps } from './Button';
-import { ButtonTypeEnum } from '../../../models/enums';
+import { ButtonNativeTypeEnum, ButtonTypeEnum } from '../../../models/enums';
 
 const { CONFIRMATION, GREY, PRIMARY, REJECTION, SECONDARY, TERTIARY } = ButtonTypeEnum;
+const { BUTTON, RESET, SUBMIT } = ButtonNativeTypeEnum;
 
 const meta: Meta<ButtonProps> = {
   title: 'Design System/Buttons/Button',
@@ -51,7 +52,7 @@ const meta: Meta<ButtonProps> = {
     },
     nativeType: {
       name: 'nativeType',
-      options: ['submit', 'reset', 'button'],
+      options: [SUBMIT, RESET, BUTTON],
       control: { type: 'select' },
       table: {
         defaultValue: { summary: 'button' }
@@ -96,12 +97,12 @@ export const Primary: Story = {
   args: {
     text: 'Primary',
     type: PRIMARY,
-    nativeType: 'button',
+    nativeType: BUTTON,
     disabled: false
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
+    const button = canvas.getByRole(BUTTON);
     await userEvent.click(button);
   }
 };
