@@ -11,3 +11,8 @@ export enum GrowDirection {
   LEFT = 'left',
   RIGHT = 'right'
 }
+
+export enum RadioButtonSizeEnum {
+  SMALL = 'small',
+  LARGE = 'large'
+}

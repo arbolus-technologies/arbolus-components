@@ -1,0 +1,90 @@
+.label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  width: auto;
+  &.small {
+    line-height: 24px;
+    padding-left: 32px;
+  }
+  &.large {
+    line-height: 32px;
+    padding-left: 40px;
+  }
+  &.disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+/* Hide the browser's default checkbox */
+.label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  &:disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  background-color: $bColorBaseWhite;
+  border-radius: 50%;
+  border: 1px solid $bColorSecondaryGreyDark;
+  left: 0;
+  &.small {
+    height: 24px;
+    width: 24px;
+  }
+  &.large {
+    height: 32px;
+    width: 32px;
+  }
+  &.disabled {
+    background-color: $bColorSecondaryGreyLight;
+  }
+}
+
+/* On mouse-over, add a grey background color */
+.label:hover input ~ .checkmark {
+  background-color: $bColorSecondaryGreyLight;
+}
+
+/* When the checkbox is checked, add a grey border */
+.label input:checked ~ .checkmark {
+  border-style: solid;
+  border-color: $bColorBaseDark1;
+  &.small {
+    border-width: 6px;
+  }
+  &.large {
+    border-width: 8px;
+  }
+  &.disabled {
+    border-color: $bColorSecondaryGreyMid;
+    background-color: $bColorBaseWhite;
+  }
+}
+
+.labelText {
+  font-weight: $weight-light;
+  color: $bColorBaseDark1;
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+  &.small {
+    font-size: $size-regular;
+  }
+  &.large {
+    font-size: $size-large;
+  }
+}
