@@ -1,9 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
-import { ButtonTypeEnum, GrowDirection } from '../../../models/enums';
+import { DropdownTypeEnum, GrowDirection } from '../../../models/enums';
 import { DropdownButton, DropdownButtonProps } from './DropdownButton';
 
-const { PRIMARY, SECONDARY } = ButtonTypeEnum;
+const { PRIMARY, SECONDARY } = DropdownTypeEnum;
+const { LEFT, RIGHT } = GrowDirection;
 
 const meta: Meta<DropdownButtonProps> = {
   title: 'Design System/Buttons/DropdownButton',
@@ -34,16 +35,16 @@ const meta: Meta<DropdownButtonProps> = {
       options: [PRIMARY, SECONDARY],
       control: { type: 'select' },
       table: {
-        defaultValue: { summary: ButtonTypeEnum.PRIMARY }
+        defaultValue: { summary: PRIMARY }
       },
       description: 'Different types of dropdown button allowed.'
     },
     growDirection: {
       name: 'growDirection',
-      options: [GrowDirection.LEFT, GrowDirection.RIGHT],
+      options: [LEFT, RIGHT],
       control: { type: 'select' },
       table: {
-        defaultValue: { summary: GrowDirection.LEFT }
+        defaultValue: { summary: LEFT }
       },
       description:
         'Direction where the dropdown list will grow. It affects the button positioning relative to the dropdown.'
@@ -87,7 +88,7 @@ export const DropdownPrimary: Story = {
       }
     ],
     type: PRIMARY,
-    growDirection: GrowDirection.RIGHT,
+    growDirection: RIGHT,
     disabled: false
   },
   play: async ({ canvasElement }) => {
