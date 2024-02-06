@@ -4,6 +4,7 @@ import { Input, Label } from 'reactstrap';
 
 import styles from './RadioButton.module.scss';
 import { RadioButtonSize } from '../../../models/types';
+import { RadioButtonSizeEnum } from '../../../models/enums';
 
 interface RadioButtonOption {
   title: string;
@@ -23,7 +24,7 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
   isChecked,
   onChange,
   disabled = false,
-  size = 'small'
+  size = RadioButtonSizeEnum.SMALL
 }) => {
   const { title, value } = option;
   return (
