@@ -1,10 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
 import { Button, ButtonProps } from './Button';
-import { ButtonNativeTypeEnum, ButtonTypeEnum } from '../../../models/enums';
+import { ButtonNativeTypeEnum, ButtonSizeEnum, ButtonTypeEnum } from '../../../models/enums';
 
 const { CONFIRMATION, GREY, PRIMARY, REJECTION, SECONDARY, TERTIARY } = ButtonTypeEnum;
 const { BUTTON, RESET, SUBMIT } = ButtonNativeTypeEnum;
+const { SMALL, LARGE } = ButtonSizeEnum;
 
 const meta: Meta<ButtonProps> = {
   title: 'Design System/Buttons/Button',
@@ -86,6 +87,15 @@ const meta: Meta<ButtonProps> = {
       },
       description:
         'Button id. It is assigned automatically as the component id and the data-testid.'
+    },
+    size: {
+      name: 'size',
+      options: [SMALL, LARGE],
+      control: { type: 'select' },
+      table: {
+        defaultValue: { summary: LARGE }
+      },
+      description: 'Different type of button sizes allowed.'
     }
   }
 };

@@ -8,13 +8,19 @@
   align-items: center;
   width: fit-content;
   min-width: fit-content;
-  height: 40px;
-  min-height: 40px;
 
   font-size: $size-regular;
   font-weight: $weight-semi-bold;
   line-height: 24px;
   user-select: none;
+  &.small {
+    height: 32px;
+    min-height: 32px;
+  }
+  &.large {
+    height: 40px;
+    min-height: 40px;
+  }
   &:focus {
     outline: none !important;
   }
