@@ -27,3 +27,8 @@ export enum ButtonNativeTypeEnum {
   RESET = 'reset',
   BUTTON = 'button'
 }
+
+export enum ButtonSizeEnum {
+  SMALL = 'small',
+  LARGE = 'large'
+}

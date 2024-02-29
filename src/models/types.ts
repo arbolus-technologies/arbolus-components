@@ -1,5 +1,6 @@
 import {
   ButtonNativeTypeEnum,
+  ButtonSizeEnum,
   ButtonTypeEnum,
   DropdownTypeEnum,
   GrowDirection,
@@ -13,4 +14,5 @@ export type ButtonNativeType = `${ButtonNativeTypeEnum}`;
 export type GrowDirectionType = `${GrowDirection}`;
 export type DropdownType = `${DropdownTypeEnum}`;
 
+export type ButtonSize = `${ButtonSizeEnum}`;
 export type RadioButtonSize = `${RadioButtonSizeEnum}`;

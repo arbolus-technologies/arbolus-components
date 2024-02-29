@@ -1,20 +1,30 @@
 .baseButton {
   all: unset; // Reset default button style
-  padding: 0 16px;
-  border-radius: 8px;
   display: flex;
   flex-direction: row;
-  column-gap: 8px;
   align-items: center;
   width: fit-content;
   min-width: fit-content;
-  height: 40px;
-  min-height: 40px;
-
-  font-size: $size-regular;
-  font-weight: $weight-semi-bold;
-  line-height: 24px;
   user-select: none;
+  line-height: 24px;
+  &.small {
+    height: 32px;
+    min-height: 32px;
+    padding: 0 8px;
+    column-gap: 4px;
+    font-size: $size-small;
+    font-weight: $weight-light;
+    border-radius: 4px;
+  }
+  &.large {
+    height: 40px;
+    min-height: 40px;
+    padding: 0 16px;
+    column-gap: 8px;
+    font-size: $size-regular;
+    font-weight: $weight-semi-bold;
+    border-radius: 8px;
+  }
   &:focus {
     outline: none !important;
   }

@@ -1,8 +1,9 @@
 import React from 'react';
-import { ButtonNativeTypeEnum, ButtonTypeEnum } from '../../../models/enums';
-import { ButtonNativeType, ButtonType } from '../../../models/types';
+import { ButtonNativeTypeEnum, ButtonSizeEnum, ButtonTypeEnum } from '../../../models/enums';
+import { ButtonNativeType, ButtonSize, ButtonType } from '../../../models/types';
 import { Icon } from '../../Icon/Icon';
 import styles from './Button.module.scss';
+import clsx from 'clsx';
 
 export interface ButtonProps {
   text: string;
@@ -14,6 +15,7 @@ export interface ButtonProps {
   startIcon?: string;
   endIcon?: string;
   id?: string;
+  size?: ButtonSize;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -24,14 +26,15 @@ export const Button: React.FC<ButtonProps> = ({
   nativeType = ButtonNativeTypeEnum.BUTTON,
   startIcon,
   endIcon,
-  id
+  id,
+  size = ButtonSizeEnum.LARGE
 }) => {
   return (
     <button
       onClick={onClick}
       disabled={disabled}
       type={nativeType}
-      className={styles[type]}
+      className={clsx(styles[type], styles[size])}
       id={id}
       data-testid={id}
     >
