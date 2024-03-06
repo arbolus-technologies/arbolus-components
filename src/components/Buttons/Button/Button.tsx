@@ -9,6 +9,8 @@ export interface ButtonProps {
   text: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onClick?: (e: any) => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onMouseDown?: (e: any) => void;
   type?: ButtonType;
   disabled?: boolean;
   nativeType?: ButtonNativeType;
@@ -22,6 +24,7 @@ export const Button: React.FC<ButtonProps> = ({
   text,
   type = ButtonTypeEnum.PRIMARY,
   onClick,
+  onMouseDown,
   disabled = false,
   nativeType = ButtonNativeTypeEnum.BUTTON,
   startIcon,
@@ -32,6 +35,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button
       onClick={onClick}
+      onMouseDown={onMouseDown}
       disabled={disabled}
       type={nativeType}
       className={clsx(styles[type], styles[size])}
