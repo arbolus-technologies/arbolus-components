@@ -28,7 +28,7 @@
 }
 
 .title {
-  font-size: $size-large;
+  font-size: $size-title-extra-small;
   font-weight: $weight-light;
   color: $bColorSecondaryGreyDark;
   @include text-ellipsis();
