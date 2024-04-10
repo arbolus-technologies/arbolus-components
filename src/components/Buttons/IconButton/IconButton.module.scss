@@ -14,6 +14,7 @@
   &:disabled {
     color: $bColorPrimaryPurpleDisabled;
     border: 1px solid $bColorPrimaryPurpleDisabled;
+    opacity: 0.6;
   }
   &:focus {
     outline: none !important;
