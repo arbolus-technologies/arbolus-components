@@ -67,10 +67,9 @@
   @extend .baseButton;
   background-color: transparent;
   color: $bColorBasePurple;
-  padding: 0;
+  padding: 0 !important;
   min-height: auto;
   height: auto;
-  padding: 0;
   &:hover {
     color: $bColorAccentPurpleDark;
     transition: color 300ms ease-out;
